@@ -1,7 +1,7 @@
 {
   "main.css": "/feedme/static/css/main.fe1cd9ff.chunk.css",
-  "main.js": "/feedme/static/js/main.0c68ce26.chunk.js",
-  "main.js.map": "/feedme/static/js/main.0c68ce26.chunk.js.map",
+  "main.js": "/feedme/static/js/main.c8a01cfb.chunk.js",
+  "main.js.map": "/feedme/static/js/main.c8a01cfb.chunk.js.map",
   "static/js/1.c6b5a3e0.chunk.js": "/feedme/static/js/1.c6b5a3e0.chunk.js",
   "static/js/1.c6b5a3e0.chunk.js.map": "/feedme/static/js/1.c6b5a3e0.chunk.js.map",
   "static/js/2.35c50dcc.chunk.js": "/feedme/static/js/2.35c50dcc.chunk.js",
@@ -12,6 +12,6 @@
   "static/media/apple_amp.wsz": "/feedme/static/media/apple_amp.77f72554.wsz",
   "static/css/main.fe1cd9ff.chunk.css.map": "/feedme/static/css/main.fe1cd9ff.chunk.css.map",
   "index.html": "/feedme/index.html",
-  "precache-manifest.aedca7156dc8791d34d779e175249b0e.js": "/feedme/precache-manifest.aedca7156dc8791d34d779e175249b0e.js",
+  "precache-manifest.1f0a8ce433abaa50c2c3fc82ddf15981.js": "/feedme/precache-manifest.1f0a8ce433abaa50c2c3fc82ddf15981.js",
   "service-worker.js": "/feedme/service-worker.js"
 }
