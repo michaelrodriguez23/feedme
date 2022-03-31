@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0c68ce26f26f6f95154d",
+    "revision": "c8a01cfbc5cc6db6704c",
     "url": "/feedme/static/css/main.fe1cd9ff.chunk.css"
   },
   {
-    "revision": "0c68ce26f26f6f95154d",
-    "url": "/feedme/static/js/main.0c68ce26.chunk.js"
+    "revision": "c8a01cfbc5cc6db6704c",
+    "url": "/feedme/static/js/main.c8a01cfb.chunk.js"
   },
   {
     "revision": "c6b5a3e0f92ee25b3986",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/feedme/static/media/apple_amp.77f72554.wsz"
   },
   {
-    "revision": "41beccc42e2a22b343ece960cd292ee2",
+    "revision": "ab89f7fe6198ca5052f259c4d5bef241",
     "url": "/feedme/index.html"
   }
 ];

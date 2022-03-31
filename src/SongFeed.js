@@ -21,7 +21,7 @@ function MapSongs(props) {
   );
 }
 export function SongFeed() {
-  let token = process.env.REACT_APP_ARENA_KEY;
+  let token = process.env.REACT_APP_ARENA;
   const arena = new Arena({
     accessToken: token,
   });
