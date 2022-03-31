@@ -1,7 +1,7 @@
 {
   "main.css": "/feedme/static/css/main.47a5d254.chunk.css",
-  "main.js": "/feedme/static/js/main.fc1e8ad3.chunk.js",
-  "main.js.map": "/feedme/static/js/main.fc1e8ad3.chunk.js.map",
+  "main.js": "/feedme/static/js/main.2f38cb95.chunk.js",
+  "main.js.map": "/feedme/static/js/main.2f38cb95.chunk.js.map",
   "static/js/1.2d281c67.chunk.js": "/feedme/static/js/1.2d281c67.chunk.js",
   "static/js/1.2d281c67.chunk.js.map": "/feedme/static/js/1.2d281c67.chunk.js.map",
   "static/js/2.3d64da1c.chunk.js": "/feedme/static/js/2.3d64da1c.chunk.js",
@@ -10,6 +10,6 @@
   "runtime~main.js.map": "/feedme/static/js/runtime~main.a8fb6e93.js.map",
   "static/css/main.47a5d254.chunk.css.map": "/feedme/static/css/main.47a5d254.chunk.css.map",
   "index.html": "/feedme/index.html",
-  "precache-manifest.680b6573d7fb4f2fd3b13d200236aa03.js": "/feedme/precache-manifest.680b6573d7fb4f2fd3b13d200236aa03.js",
+  "precache-manifest.aa2ee447355f6245e1c929a418b849a3.js": "/feedme/precache-manifest.aa2ee447355f6245e1c929a418b849a3.js",
   "service-worker.js": "/feedme/service-worker.js"
 }
