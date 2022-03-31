@@ -62,7 +62,7 @@ export function About() {
       <About id="bio">
         Hiii! <hr />
       </About>
-      <Me src={process.env.PUBLIC_URL + me} />
+      <Me id="me" src={process.env.PUBLIC_URL + me} />
     </div>
   );
 }
