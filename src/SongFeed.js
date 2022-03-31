@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Webamp from "webamp";
-import appleSkin from "./assets/skins/apple_amp.wsz";
 const Arena = require("are.na");
 
 function MapSongs(props) {
@@ -49,7 +48,7 @@ export function SongFeed() {
         },
       ],
       initialSkin: {
-        url: process.env.PUBLIC_URL + appleSkin,
+        url: process.env.PUBLIC_URL + "/assets/skins/apple_amp.wsz",
       },
     });
 
@@ -57,7 +56,8 @@ export function SongFeed() {
     webamp.appendTracks([
       {
         url:
-          "./assets/music/Moment in Love - Art of Noise (slowed + pitched).mp3",
+          process.env.PUBLIC_URL +
+          "/assets/music/Moment in Love - Art of Noise (slowed + pitched).mp3",
       },
     ]);
   }, []);

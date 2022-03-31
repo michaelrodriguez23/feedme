@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import me from "./assets/img/me.png";
 
 export function About() {
   var i = 0;
@@ -62,7 +61,7 @@ export function About() {
       <About id="bio">
         Hiii! <hr />
       </About>
-      <Me id="me" src={process.env.PUBLIC_URL + me} />
+      <Me id="me" src={process.env.PUBLIC_URL + "assets/img/me.png"} />
     </div>
   );
 }
