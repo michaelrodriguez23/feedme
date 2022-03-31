@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "c8a01cfbc5cc6db6704c",
+    "revision": "a9fa64632a5ba4772441",
     "url": "/feedme/static/css/main.fe1cd9ff.chunk.css"
   },
   {
-    "revision": "c8a01cfbc5cc6db6704c",
-    "url": "/feedme/static/js/main.c8a01cfb.chunk.js"
+    "revision": "a9fa64632a5ba4772441",
+    "url": "/feedme/static/js/main.a9fa6463.chunk.js"
   },
   {
     "revision": "c6b5a3e0f92ee25b3986",
     "url": "/feedme/static/js/1.c6b5a3e0.chunk.js"
   },
   {
-    "revision": "35c50dcc1e2f6d191c96",
-    "url": "/feedme/static/js/2.35c50dcc.chunk.js"
+    "revision": "78b013a593bb808d62fc",
+    "url": "/feedme/static/js/2.78b013a5.chunk.js"
   },
   {
     "revision": "e5a9479c5a3f52e25e44",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/feedme/static/media/apple_amp.77f72554.wsz"
   },
   {
-    "revision": "ab89f7fe6198ca5052f259c4d5bef241",
+    "revision": "37d620dd5c13c13721379f032a76a5cf",
     "url": "/feedme/index.html"
   }
 ];
