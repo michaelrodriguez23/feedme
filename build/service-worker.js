@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/michael-elijah.com/precache-manifest.8963e8dfd1d74488ff47233a3d00ad2d.js"
+  "/michael-elijah.com/precache-manifest.edad9a4b81e3b796130090f736ea7966.js"
 );
 
 workbox.clientsClaim();
