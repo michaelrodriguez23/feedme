@@ -9,11 +9,17 @@ const arena = new Arena({
 });
 
 const Photo = styled.img`
-  width: 0vw;
+  width: 30vw;
+
+  @media screen and (max-width: 500px) {
+    width: 80vw;
+  }
 `;
 const Caption = styled.p`
-  font-size: 1em;
+  font-size: 4vw;
   font-family: Helvetica, sans-serif;
+  text-align: center;
+  padding: 0;
 `;
 const DivContainer = styled.div`
   height: 100vh;
@@ -24,7 +30,14 @@ const DivFlex = styled.div`
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 2em;
+  padding: 2.5em;
+  @media all and (max-width: 500px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0;
+  }
 `;
 const PhotoContainer = styled.div``;
 
@@ -64,6 +77,7 @@ export function PhotoFeed() {
   function Galleries() {
     return (
       <>
+        <h1> Click !</h1>
         <DivFlex>
           {gallery.slice(1).map((gallery, index) => (
             <PhotoContainer>

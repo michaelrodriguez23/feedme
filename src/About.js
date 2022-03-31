@@ -4,7 +4,7 @@ import styled from "styled-components";
 export function About() {
   var i = 0;
   var txt =
-    " I am Michael! I explore the realms of web-development, augmented reality, film, and design.";
+    " is a web developer,film and augmented reality artist. Who is interested in the internet as an emerging social space. ";
 
   /* The text */
   var speed = 80; /* The speed/duration of the effect in milliseconds */
@@ -21,15 +21,21 @@ export function About() {
   }
 
   const About = styled.p`
+    font-family: monospace !important;
     position: relative;
     left: 1vw;
     font-size: 4.4vw;
     color: blue;
-    font-family: Arial, Helvetica, sans-serif;
+
     width: 80vw;
     height: 40vw;
     padding: 1em;
     margin: 0;
+
+    @media all and (max-width: 500px) {
+      font-size: 6vw;
+      padding: 0em;
+    }
   `;
   const Me = styled.img`
     position: absolute;
@@ -59,7 +65,7 @@ export function About() {
         ></source>
       </audio>
       <About id="bio">
-        Hiii! <hr />
+        Michael Elijah <hr />
       </About>
       <Me id="me" src={process.env.PUBLIC_URL + "/assets/img/me.png"} />
     </div>

@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "fc1e8ad3c3814d5d3cb4",
+    "revision": "2f38cb95b1c07a038567",
     "url": "/feedme/static/css/main.47a5d254.chunk.css"
   },
   {
-    "revision": "fc1e8ad3c3814d5d3cb4",
-    "url": "/feedme/static/js/main.fc1e8ad3.chunk.js"
+    "revision": "2f38cb95b1c07a038567",
+    "url": "/feedme/static/js/main.2f38cb95.chunk.js"
   },
   {
     "revision": "2d281c672a566deb1a05",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/feedme/static/js/runtime~main.a8fb6e93.js"
   },
   {
-    "revision": "fc3be7ffb47874a374e0e029a5a0f5e3",
+    "revision": "9c1a313776702b6aaeecfcef95d10767",
     "url": "/feedme/index.html"
   }
 ];

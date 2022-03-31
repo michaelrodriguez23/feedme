@@ -14,10 +14,17 @@ export function Channels(props) {
     flex-wrap: wrap;
     align-content: space-around;
     gap: 3em;
-    width: 100vw;
     background-color: white;
-    width: 90%;
+    width: 100%;
     padding-bottom: 3em;
+
+    @media all and (max-width: 500px) {
+      gap: 1.2em;
+      padding-left: 0.2em;
+      padding-right: 0.2em;
+      width: 100%;
+      padding-bottom: 3em;
+    }
   `;
   const ListItem = styled.li`
     font-size: 3vw;
@@ -26,10 +33,15 @@ export function Channels(props) {
   `;
   const Button = styled.button`
     color: violet;
-    padding: 1em;
+    padding: 2em;
     border-color: aliceblue;
     border-radius: 20em;
     filter: drop-shadow(1vw 1vw 1vw #4444dd);
+
+    @media all and (max-width: 500px) {
+      padding: 0.5em;
+      font-size: 1.5em;
+    }
     & :hover {
       filter: blur(0.02em);
       color: blue;
