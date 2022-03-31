@@ -44,7 +44,7 @@ export function SongFeed() {
 
           url:
             process.env.PUBLIC_URL +
-            "./assets/music/Moment in Love - Art of Noise (slowed + pitched).mp3",
+            "/assets/music/Moment in Love - Art of Noise (slowed + pitched).mp3",
         },
       ],
       initialSkin: {
