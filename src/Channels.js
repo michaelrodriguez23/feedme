@@ -18,7 +18,8 @@ export function Channels(props) {
     padding-top: 1em;
     padding-bottom: 2em;
     justify-content: center;
-
+    background-color: white;
+    z-index: -5;
     @media all and (max-width: 500px) {
       gap: 1em;
       padding-left: 0;
@@ -28,16 +29,15 @@ export function Channels(props) {
   `;
   const ListItem = styled.li`
     font-size: 4vw;
-    color: yellow;
+    color: black;
     list-style: none;
   `;
   const Button = styled.button`
-    color: violet;
-    padding: 1em;
-    border-color: limegreen;
+    padding: 1.2em;
+    border-color: lightcoral;
     border-radius: 20em;
-    filter: drop-shadow(1vw 1vw 1vw red);
-    background-color: black;
+    filter: drop-shadow(1vw 1vw 1vw limegreen);
+    background-color: white;
 
     @media all and (max-width: 500px) {
       /* padding: 0.5em;

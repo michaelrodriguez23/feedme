@@ -4,7 +4,7 @@ export function Contact() {
   const Info = styled.p`
     display: block;
     font-size: 4vh;
-    color: yellow;
+    color: lightcoral;
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     text-align: center;
@@ -13,7 +13,7 @@ export function Contact() {
   `;
 
   const ContactContainer = styled.div`
-    background-color: black !important;
+    background-color: white !important;
     height: 100vh;
   `;
 

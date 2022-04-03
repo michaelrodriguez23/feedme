@@ -9,7 +9,8 @@ const Photo = styled.img`
   object-fit: contain;
   display: block;
   margin: auto;
-  border: 0.2em solid white;
+  border: 0.2em solid lightcoral;
+  background-color: black;
   @media all and (max-width: 500px) {
     width: 40vw;
     height: 40vw;
@@ -19,7 +20,7 @@ const Photo = styled.img`
 
 const Caption = styled.p`
   font-size: 2em;
-  color: white;
+  color: lightsteelblue;
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   margin: auto;
@@ -42,7 +43,7 @@ const ListWrapper = styled.div`
 `;
 const Header = styled.div`
   padding: 0.5em;
-  color: white;
+  color: lightsteelblue;
   font-size: 1em;
   font-family: monospace;
 `;
@@ -52,7 +53,7 @@ const Wrapper = styled.div`
   height: 700px;
   overflow-y: auto;
   max-height: 1000px;
-  background-color: black;
+  background-color: white;
 `;
 
 function MapFeed(props) {
@@ -72,7 +73,6 @@ function MapFeed(props) {
               <ListWrapper>
                 <List key={feed.id}>
                   <a href={feed.source ? feed.source.provider.url : null}>
-                    <h4> {index + 1}</h4>
                     <Photo src={feed.image ? feed.image.display.url : null} />
                     <Caption> {feed.title} </Caption>{" "}
                   </a>

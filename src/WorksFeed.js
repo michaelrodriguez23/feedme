@@ -7,7 +7,7 @@ const Container = styled.div`
   object-fit: fill;
   display: block;
   margin: auto;
-  background-color: black;
+  background-color: white;
   height: 100vh;
 `;
 

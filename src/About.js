@@ -21,7 +21,7 @@ export function About() {
   }
 
   const Container = styled.div`
-    background-color: black;
+    background-color: white;
     height: 100vh;
   `;
 
@@ -30,7 +30,7 @@ export function About() {
     position: relative;
     left: 1vw;
     font-size: 4.4vw;
-    color: white;
+    color: lightcoral;
     width: 80vw;
     height: 100vw;
     padding: 1em;
