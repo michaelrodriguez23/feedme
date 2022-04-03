@@ -14,37 +14,39 @@ export function Channels(props) {
     flex-wrap: wrap;
     align-content: space-around;
     gap: 3em;
-    background-color: white;
     width: 100%;
-    padding-bottom: 3em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    justify-content: center;
 
     @media all and (max-width: 500px) {
-      gap: 1.2em;
-      padding-left: 0.2em;
-      padding-right: 0.2em;
-      width: 100%;
-      padding-bottom: 3em;
+      gap: 1em;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 2em;
     }
   `;
   const ListItem = styled.li`
-    font-size: 3vw;
-    color: black;
+    font-size: 4vw;
+    color: yellow;
     list-style: none;
   `;
   const Button = styled.button`
     color: violet;
-    padding: 2em;
-    border-color: aliceblue;
+    padding: 1em;
+    border-color: limegreen;
     border-radius: 20em;
-    filter: drop-shadow(1vw 1vw 1vw #4444dd);
+    filter: drop-shadow(1vw 1vw 1vw red);
+    background-color: black;
 
     @media all and (max-width: 500px) {
-      padding: 0.5em;
+      /* padding: 0.5em;
       font-size: 1.5em;
+      gap: 0; */
     }
     & :hover {
       filter: blur(0.02em);
-      color: blue;
+      color: yellowgreen;
       border-color: whitesmoke;
     }
   `;
@@ -55,9 +57,9 @@ export function Channels(props) {
 
   const data = [
     { id: 1, channel: "works" },
-    { id: 2, channel: "pics" },
-    { id: 3, channel: "listenings" },
-    { id: 4, channel: " reads" },
+    // { id: 2, channel: "pics" },
+    // { id: 3, channel: "listenings" },
+    { id: 4, channel: "mood" },
     { id: 5, channel: "about" },
     { id: 6, channel: "contact" },
   ];
@@ -65,8 +67,8 @@ export function Channels(props) {
   const feeds = {
     works: <WorksFeed />,
     pics: <PhotoFeed />,
-    listenings: <SongFeed />,
-    reads: <HighTechFeed />,
+    // listenings: <SongFeed />,
+    mood: <HighTechFeed />,
     about: <About />,
     contact: <Contact />,
   };

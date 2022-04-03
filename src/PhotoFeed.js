@@ -8,30 +8,43 @@ const arena = new Arena({
   accessToken: token,
 });
 
+const Loading = styled.img`
+  display: block;
+  width: 5vw;
+  margin: auto;
+  filter: opacity(50%);
+  @media screen and (max-width: 500px) {
+    width: 50vw;
+  }
+`;
+
 const Photo = styled.img`
-  width: 30vw;
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: contain;
+  vertical-align: bottom;
+  width: 10vw;
+  margin: 1em;
+  flex-grow: 1;
 
   @media screen and (max-width: 500px) {
-    width: 80vw;
+    height: 50vh;
   }
 `;
 const Caption = styled.p`
-  font-size: 4vw;
+  font-size: 1vmin;
   font-family: Helvetica, sans-serif;
   text-align: center;
   padding: 0;
 `;
 const DivContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
-  cursor: pointer;
+  flex-grow: 1;
 `;
 const DivFlex = styled.div`
   display: flex;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
-  gap: 2em;
-  padding: 2.5em;
+  flex-direction: row;
+
   @media all and (max-width: 500px) {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -61,14 +74,18 @@ export function PhotoFeed() {
   }, []);
 
   function AppendPhoto() {
-    console.log(counter);
     if (counter < photos.length - 1) {
       SetCounter((prevCounter) => prevCounter + 1);
-      setGallery((prevGalleries) => [...prevGalleries, photos[counter + 1]]);
+      setGallery((prevGalleries) => [...prevGalleries, photos[1]]);
     }
   }
   if (gallery.length < 1) {
-    return <> loading... </>;
+    return (
+      <Loading
+        src={process.env.PUBLIC_URL + "./assets/img/load.gif"}
+        alt="loading"
+      />
+    );
   }
   if (gallery.length == 1) {
     AppendPhoto();
@@ -77,15 +94,10 @@ export function PhotoFeed() {
   function Galleries() {
     return (
       <>
-        <h1> Click !</h1>
         <DivFlex>
-          {gallery.slice(1).map((gallery, index) => (
+          {photos.map((photo, index) => (
             <PhotoContainer>
-              <Photo
-                src={gallery.image ? gallery.image.display.url : null}
-                className={index % 2 == 1 ? "grow" : "shrink"}
-              />
-              <Caption> {gallery.title ? gallery.title : null} </Caption>
+              <Photo src={photo.image ? photo.image.display.url : null} />
             </PhotoContainer>
           ))}
         </DivFlex>

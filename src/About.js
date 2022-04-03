@@ -20,15 +20,19 @@ export function About() {
     }
   }
 
+  const Container = styled.div`
+    background-color: black;
+    height: 100vh;
+  `;
+
   const About = styled.p`
     font-family: monospace !important;
     position: relative;
     left: 1vw;
     font-size: 4.4vw;
-    color: blue;
-
+    color: white;
     width: 80vw;
-    height: 40vw;
+    height: 100vw;
     padding: 1em;
     margin: 0;
 
@@ -41,7 +45,7 @@ export function About() {
     position: absolute;
     bottom: -40%;
     right: 5%;
-    height: 40%;
+    height: 50%;
     transition: ease-out 0.4s;
 
     &:hover {
@@ -58,7 +62,7 @@ export function About() {
   }, 100);
 
   return (
-    <div>
+    <Container>
       <audio className="audio-element">
         <source
           src={process.env.PUBLIC_URL + "/assets/music/sound-on.mp4"}
@@ -68,6 +72,6 @@ export function About() {
         Michael Elijah <hr />
       </About>
       <Me id="me" src={process.env.PUBLIC_URL + "/assets/img/me.png"} />
-    </div>
+    </Container>
   );
 }

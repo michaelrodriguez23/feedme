@@ -4,45 +4,62 @@ import styled from "styled-components";
 const Arena = require("are.na");
 
 const Photo = styled.img`
-  width: 25vw;
-  object-fit: scale-down;
+  width: 30vw;
+  height: 30vw;
+  object-fit: contain;
   display: block;
   margin: auto;
+  border: 0.2em solid white;
+  @media all and (max-width: 500px) {
+    width: 40vw;
+    height: 40vw;
+    border: 0.2em solid white;
+  }
 `;
 
 const Caption = styled.p`
-  font-size: 0.8em;
+  font-size: 2em;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   margin: auto;
   text-align: center;
   text-decoration: none;
+  padding: 1em;
+  @media all and (max-width: 500px) {
+    font-size: 1em;
+  }
 `;
 
 const DivContainer = styled.div`
   display: flex;
   flex-direction: row;
-
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `;
 const ListWrapper = styled.div`
   width: 100vw;
-  flex: 1;
 `;
 const Header = styled.div`
-  padding: 1em;
+  padding: 0.5em;
+  color: white;
+  font-size: 1em;
+  font-family: monospace;
+`;
+const Wrapper = styled.div`
+  display: block;
+  width: 100%;
+  height: 700px;
+  overflow-y: auto;
+  max-height: 1000px;
+  background-color: black;
 `;
 
 function MapFeed(props) {
   return (
-    <>
+    <Wrapper>
       <Header>
-        <h1> The Weekly Digest</h1>
-        <h3>
-          Thought to share some of the articles + resources I find while surfing
-          the web.
-        </h3>
+        <p> The Weekly Digest [Random things I read on the web] </p>
       </Header>
 
       <ul>
@@ -64,7 +81,7 @@ function MapFeed(props) {
             ))}
         </DivContainer>
       </ul>
-    </>
+    </Wrapper>
   );
 }
 const List = styled.li`

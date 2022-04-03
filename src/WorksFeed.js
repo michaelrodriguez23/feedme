@@ -4,10 +4,11 @@ import Iframe from "react-iframe";
 const Arena = require("are.na");
 
 const Container = styled.div`
-  width: 40%;
   object-fit: fill;
   display: block;
   margin: auto;
+  background-color: black;
+  height: 100vh;
 `;
 
 const Caption = styled.p`
@@ -20,26 +21,28 @@ const Caption = styled.p`
 
 function MapFeed(props) {
   return (
-    <ul>
-      {props.feed
-        .slice(0)
-        .reverse()
-        .filter((feed) => feed.image)
-        .map((feed, index) => (
-          <List key={feed.id}>
-            <h1> {index + 1}</h1>
-            <Iframe
-              url={feed.source ? feed.source.url : null}
-              width="450px"
-              height="450px"
-              className="myYoutube"
-              display="initial"
-              position="relative"
-            />
-            <Caption> {feed.title} </Caption>
-          </List>
-        ))}
-    </ul>
+    <Container>
+      <ul>
+        {props.feed
+          .slice(0)
+          .reverse()
+          .filter((feed) => feed.image)
+          .map((feed, index) => (
+            <List key={feed.id}>
+              <h1> {index + 1}</h1>
+              <Iframe
+                url={feed.source ? feed.source.url : null}
+                width="450px"
+                height="450px"
+                className="myYoutube"
+                display="initial"
+                position="relative"
+              />
+              <Caption> {feed.title} </Caption>
+            </List>
+          ))}
+      </ul>
+    </Container>
   );
 }
 const List = styled.li`
