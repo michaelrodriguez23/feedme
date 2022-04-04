@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Arena = require("are.na");
 
@@ -19,7 +20,8 @@ const Photo = styled.img`
 `;
 
 const Caption = styled.p`
-  font-size: 2em;
+  font-size: 1.5;
+
   color: lightsteelblue;
   font-family: Arial, Helvetica, sans-serif;
   display: block;
@@ -33,6 +35,7 @@ const Caption = styled.p`
 `;
 
 const DivContainer = styled.div`
+  padding-top: 5em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -42,10 +45,12 @@ const ListWrapper = styled.div`
   width: 100vw;
 `;
 const Header = styled.div`
-  padding: 0.5em;
   color: lightsteelblue;
-  font-size: 1em;
+  font-size: 2em;
   font-family: monospace;
+  position: fixed;
+  width: 20vw;
+  padding-left: 2em;
 `;
 const Wrapper = styled.div`
   display: block;
@@ -72,7 +77,7 @@ function MapFeed(props) {
             .map((feed, index) => (
               <ListWrapper>
                 <List key={feed.id}>
-                  <a href={feed.source ? feed.source.provider.url : null}>
+                  <a href={feed.source ? feed.source.url : null}>
                     <Photo src={feed.image ? feed.image.display.url : null} />
                     <Caption> {feed.title} </Caption>{" "}
                   </a>

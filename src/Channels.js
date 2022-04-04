@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Contact } from "./Contact";
 import { About } from "./About";
@@ -6,10 +6,26 @@ import { SongFeed } from "./SongFeed";
 import { PhotoFeed } from "./PhotoFeed";
 import { WorksFeed } from "./WorksFeed";
 import { HighTechFeed } from "./HighTechFeed";
+import { gsap } from "gsap";
 
 import { Link } from "react-router-dom";
 
 export function Channels(props) {
+  let navBtn = useRef(null);
+
+  useEffect(() => {
+    console.log(navBtn);
+    gsap.set(".nav-btn", { x: 0, y: 350, opacity: 0 });
+    gsap.to(".nav-btn", {
+      stagger: 0.2,
+      rotation: 360,
+      y: 0,
+      duration: 1,
+      opacity: 0.9,
+      yoyo: true,
+    });
+  });
+
   const UnorderedList = styled.ul`
     display: flex;
     flex-direction: row;
@@ -84,7 +100,7 @@ export function Channels(props) {
           return (
             <div>
               <Link to={"/" + channel}>
-                <Button>
+                <Button ref={(el) => (navBtn = el)} className="nav-btn">
                   <List channel={channel}></List>
                 </Button>
               </Link>
