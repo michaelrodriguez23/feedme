@@ -14,34 +14,31 @@ export function Contact() {
 
   const ContactContainer = styled.div`
     padding-top: 5em;
-    height: 40vh;
-    width: 100vw;
 
     filter: opacity(40%);
   `;
   const Form = styled.form`
-    position: relative;
-    width: 20em;
-    height: 50vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     gap: 2em;
     margin: auto;
   `;
 
   const Input = styled.input`
-    height: 1em;
-    font-size: 2em;
+    height: 3vh;
+    font-size: 3vh;
   `;
   const Send = styled.input`
-    height: 2em;
-    width: 5em;
-    font-size: 1em;
+    height: 5vh;
+    width: 10vh;
+    font-size: 3vh;
   `;
   const Text = styled.textarea`
-    height: 5em;
-    font-size: 2em;
+    height: 5vh;
+    font-size: 2.2vh;
   `;
   return (
     <ContactContainer>
