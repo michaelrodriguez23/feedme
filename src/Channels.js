@@ -54,7 +54,7 @@ export function Channels(props) {
     padding: 1.2em;
     border-color: lightcoral;
     border-radius: 20em;
-    filter: drop-shadow(1vw 1vw 1vw limegreen);
+    filter: drop-shadow(1vh 1vh 1vh limegreen);
     background-color: white;
 
     @media all and (max-width: 500px) {

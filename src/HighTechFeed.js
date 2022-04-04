@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { css } from "@emotion/react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import PulseLoader from "react-spinners/PulseLoader";
 
 const Arena = require("are.na");
 
@@ -46,11 +47,15 @@ const ListWrapper = styled.div`
 `;
 const Header = styled.div`
   color: lightsteelblue;
-  font-size: 2em;
+  font-size: 4vh;
   font-family: monospace;
   position: fixed;
-  width: 20vw;
-  padding-left: 2em;
+  width: 20vh;
+  padding-left: 1em;
+  @media all and (max-width: 500px) {
+    font-size: 2vh;
+    width: 5vh;
+  }
 `;
 const Wrapper = styled.div`
   display: block;
@@ -65,7 +70,7 @@ function MapFeed(props) {
   return (
     <Wrapper>
       <Header>
-        <p> The Weekly Digest [Random things I read on the web] </p>
+        <p> The Weekly Link Digest</p>
       </Header>
 
       <ul>
@@ -77,7 +82,11 @@ function MapFeed(props) {
             .map((feed, index) => (
               <ListWrapper>
                 <List key={feed.id}>
-                  <a href={feed.source ? feed.source.url : null}>
+                  <a
+                    href={feed.source ? feed.source.url : null}
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Photo src={feed.image ? feed.image.display.url : null} />
                     <Caption> {feed.title} </Caption>{" "}
                   </a>
@@ -89,6 +98,16 @@ function MapFeed(props) {
     </Wrapper>
   );
 }
+
+const override = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-color: limegreen;
+  transition: all;
+`;
+
 const List = styled.li`
   text-decoration: none;
   display: block;
@@ -97,6 +116,9 @@ const List = styled.li`
 `;
 
 export function HighTechFeed() {
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("red");
+
   let token = process.env.REACT_APP_ARENA;
 
   const arena = new Arena({
@@ -111,7 +133,23 @@ export function HighTechFeed() {
       .contents({ per: 200 })
       .then((contents) => setFeed(contents))
       .catch((err) => console.log(err));
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   }, []);
 
-  return <div>{<MapFeed feed={feed}> </MapFeed>}</div>;
+  return (
+    <div>
+      <PulseLoader
+        color={color}
+        className={loading ? "fade-in" : "fade-out"}
+        loading={loading}
+        css={override}
+        size={100}
+      />
+
+      {!loading ? <MapFeed feed={feed}> </MapFeed> : null}
+    </div>
+  );
 }

@@ -14,10 +14,6 @@ import { gsap } from "gsap";
 function App() {
   // const [currentFeed, setCurrentFeed] = useState(<About />);
 
-  let navBtn = useRef(null);
-
-  console.log(navBtn);
-
   const Container = styled.div`
     @media screen and (max-width: 450px) {
       padding-left: 1em;
@@ -30,8 +26,6 @@ function App() {
 
   //   return CurrentFeedThingy;
   // };
-  console.log("yer");
-  gsap.to(".nav-btn", { rotation: 27, x: 100, duration: 1 });
 
   return (
     <Router>
