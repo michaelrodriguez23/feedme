@@ -7,6 +7,8 @@ import { PhotoFeed } from "./PhotoFeed";
 import { WorksFeed } from "./WorksFeed";
 import { HighTechFeed } from "./HighTechFeed";
 
+import { Link } from "react-router-dom";
+
 export function Channels(props) {
   const UnorderedList = styled.ul`
     display: flex;
@@ -66,7 +68,7 @@ export function Channels(props) {
 
   const feeds = {
     works: <WorksFeed />,
-    pics: <PhotoFeed />,
+    // pics: <PhotoFeed />,
     // listenings: <SongFeed />,
     mood: <HighTechFeed />,
     about: <About />,
@@ -81,9 +83,11 @@ export function Channels(props) {
         {data.map(({ id, channel }, index) => {
           return (
             <div>
-              <Button onClick={handleClick}>
-                <List channel={channel}></List>
-              </Button>
+              <Link to={"/" + channel}>
+                <Button>
+                  <List channel={channel}></List>
+                </Button>
+              </Link>
             </div>
           );
         })}
