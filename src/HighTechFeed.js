@@ -11,19 +11,25 @@ const Photo = styled.img`
   object-fit: contain;
   display: block;
   margin: auto;
-  border: 0.2em solid lightcoral;
+  border: 1.5px solid whitesmoke;
+  filter: drop-shadow(1vh 1vh 2vh black);
+  border-radius: 2em;
   background-color: black;
   @media all and (max-width: 500px) {
     width: 40vw;
     height: 40vw;
     border: 0.2em solid white;
+    transition: all ease 0.2s;
+  }
+  &:hover {
+    transform: scale(1.02);
   }
 `;
 
 const Caption = styled.p`
-  font-size: 1.5;
-
-  color: lightsteelblue;
+  font-size: 1.3em;
+  width: 12em;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   margin: auto;
@@ -41,6 +47,7 @@ const DivContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  overflow-x: hidden;
 `;
 const ListWrapper = styled.div`
   width: 100vw;
@@ -100,12 +107,12 @@ function MapFeed(props) {
 }
 
 const override = css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  border-color: limegreen;
-  transition: all;
+  position: absolute;
+  top: 50%;
+  left: 45vw;
+  @media screen and (max-width: 450px) {
+    left: 30vw;
+  }
 `;
 
 const List = styled.li`
@@ -117,7 +124,7 @@ const List = styled.li`
 
 export function HighTechFeed() {
   let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("red");
+  let [color, setColor] = useState("whitesmoke");
 
   let token = process.env.REACT_APP_ARENA;
 
@@ -146,7 +153,7 @@ export function HighTechFeed() {
         className={loading ? "fade-in" : "fade-out"}
         loading={loading}
         css={override}
-        size={100}
+        size={50}
       />
 
       {!loading ? <MapFeed feed={feed}> </MapFeed> : null}

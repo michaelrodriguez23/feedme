@@ -37,8 +37,8 @@ export function About() {
     margin: 0;
 
     @media all and (max-width: 500px) {
-      font-size: 6vw;
-      padding: 0em;
+      font-size: 5vw;
+      padding-left: 1em;
     }
   `;
   const Me = styled.img`

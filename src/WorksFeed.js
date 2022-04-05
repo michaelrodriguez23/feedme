@@ -1,71 +1,145 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Iframe from "react-iframe";
+import data from "./data.js";
 const Arena = require("are.na");
 
+console.log(data);
+
 const Container = styled.div`
-  object-fit: fill;
-  display: block;
   margin: auto;
-  background-color: white;
   height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
 `;
 
-const Caption = styled.p`
-  font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
+const Title = styled.p`
+  font-size: 2em;
+  font-family: Arial;
   display: block;
   margin: auto;
   text-align: center;
+  @media screen and (max-width: 450px) {
+    padding-top: 1em;
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 90vw;
+  }
 `;
+const Caption = styled.p`
+  font-size: 1em;
+  width: 50vw;
+  padding-top: 1em;
+  font-family: monospace;
+  display: block;
+  margin: auto;
+  text-align: center;
+  @media screen and (max-width: 450px) {
+    font-size: 1.5vh;
+    width: 80vw;
+  }
+`;
+const CoverImage = styled.img`
+  object-fit: contain;
+  width: 30vw;
+  flex-grow: auto;
+  @media screen and (max-width: 450px) {
+    width: 50vw;
+  }
+`;
+const SubImage1 = styled.img`
+  object-fit: contain;
+  width: 30vw;
+  flex-grow: auto;
+`;
+const SubImage2 = styled.img`
+  object-fit: contain;
+  width: 30vw;
+  flex-grow: auto;
+`;
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+const LinkContainer = styled.div`
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+`;
+const List = styled.li`
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  display: block;
+  height: 80vh;
+  @media screen and (max-width: 450px) {
+    height: 90vw;
+  }
+`;
+const HyperLink = styled.button`
+  background-image: url("./assets/icons/see.png");
+  background-repeat: no-repeat;
+  background-color: white;
+  border: none;
+  height: 2.6em;
+  width: 2.6em;
+  transform: rotateZ(270deg);
+  &:hover {
+    cursor: pointer;
 
-function MapFeed(props) {
+    transform: rotateZ(90deg);
+  }
+`;
+const BlogLink = styled.button`
+  background-image: url("./assets/icons/inspect.png");
+  background-repeat: no-repeat;
+  background-color: white;
+  border: none;
+  height: 2.6em;
+  width: 2.6em;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+`;
+const GithubLink = styled.button``;
+
+function MapWork(props) {
+  let [work, setWork] = useState([data]);
   return (
     <Container>
       <ul>
-        {props.feed
-          .slice(0)
-          .reverse()
-          .filter((feed) => feed.image)
-          .map((feed, index) => (
-            <List key={feed.id}>
-              <h1> {index + 1}</h1>
-              <Iframe
-                url={feed.source ? feed.source.url : null}
-                width="450px"
-                height="450px"
-                className="myYoutube"
-                display="initial"
-                position="relative"
-              />
-              <Caption> {feed.title} </Caption>
-            </List>
-          ))}
+        {props.data.map((work, index) => (
+          <List key={work.id}>
+            <ImageContainer>
+              <CoverImage src={process.env.PUBLIC_URL + work.images.cover} />
+              {work.images.first ? (
+                <SubImage1 src={process.env.PUBLIC_URL + work.images.first} />
+              ) : null}
+              {work.images.first ? (
+                <SubImage2 src={process.env.PUBLIC_URL + work.images.second} />
+              ) : null}
+            </ImageContainer>
+            <Title> {work.title} </Title>
+            <Caption> {work.description} </Caption>
+
+            <LinkContainer>
+              <HyperLink></HyperLink>
+              <BlogLink></BlogLink>
+            </LinkContainer>
+          </List>
+        ))}
       </ul>
     </Container>
   );
 }
-const List = styled.li`
-  text-decoration: none;
-  display: block;
-  padding: 2em;
-`;
 
 export function WorksFeed() {
-  let token = process.env.REACT_APP_ARENA;
-  const arena = new Arena({
-    accessToken: token,
-  });
+  let [works, setWorks] = useState([]);
 
-  let [feed, setFeed] = useState([]);
-
-  useEffect(() => {
-    arena
-      .channel("worksinprogress")
-      .contents({ per: 200 })
-      .then((contents) => console.log(contents))
-      .catch((err) => console.log(err));
-  }, []);
-
-  return <div>{<MapFeed feed={feed}> </MapFeed>}</div>;
+  return <div>{<MapWork data={data}> </MapWork>}</div>;
 }

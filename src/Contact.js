@@ -13,11 +13,12 @@ export function Contact() {
   `;
 
   const ContactContainer = styled.div`
-    padding-top: 5em;
-
-    filter: opacity(40%);
+    height: 10vh;
+    width: 100%;
+    border-radius: 500em;
   `;
   const Form = styled.form`
+    padding-top: 2em;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -28,17 +29,37 @@ export function Contact() {
   `;
 
   const Input = styled.input`
-    height: 3vh;
+    height: 4vh;
+    width: 40vw;
     font-size: 3vh;
+    border-radius: 0.2em;
+    text-align: center;
+    @media screen and (max-width: 450px) {
+      font-size: 2vh;
+      width: 60vw;
+    }
   `;
   const Send = styled.input`
-    height: 5vh;
+    height: 3vh;
     width: 10vh;
-    font-size: 3vh;
+    font-size: 2vh;
+    background-color: light;
   `;
   const Text = styled.textarea`
-    height: 5vh;
-    font-size: 2.2vh;
+    height: 10vh;
+    width: 40vw;
+    border-radius: 0.2em;
+    text-align: center;
+    font-size: 4vh;
+    @media screen and (max-width: 450px) {
+      font-size: 3vh;
+      width: 60vw;
+    }
+  `;
+  const Header = styled.h1`
+    font-size: 20.2vh;
+    filter: drop-shadow(1vh 1vh 0.7vh lightblue);
+    font-family: Arial, Helvetica, sans-serif;
   `;
   return (
     <ContactContainer>
@@ -47,21 +68,21 @@ export function Contact() {
         action="https://formsubmit.co/socialbug001@yahoo.com"
         method="POST"
       >
+        {" "}
+        <Header>📧</Header>
         <Input type="hidden" name="_next" value="" />
         <Input
           type="email"
           name="_captcha"
-          placeholder="someone@email.com"
+          placeholder="placeholder@email.com"
           required
         />
         <Input type="hidden" name="_captcha" value="false" />
-
         <Text
           id="message"
           name="message"
           placeholder="Send your thoughts this way!"
         ></Text>
-
         <Send type="submit" value="Send" />
       </Form>
     </ContactContainer>
