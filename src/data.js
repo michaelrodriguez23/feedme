@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    title: "Hydroponic System AR Showcase",
+    title: "Hydroponic System AR",
     description:
       "Various hydroponic systems and their use cases through immersive design. The models were created using Blender, and UI developed in Spark AR with node patching, and Javascript.",
     year: "2022",

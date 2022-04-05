@@ -14,12 +14,7 @@ import { gsap } from "gsap";
 function App() {
   // const [currentFeed, setCurrentFeed] = useState(<About />);
 
-  const Container = styled.div`
-    @media screen and (max-width: 450px) {
-      padding-left: 1em;
-      padding-right: 1em;
-    }
-  `;
+  const Container = styled.div``;
 
   // const CurrentFeed = () => {
   //   const CurrentFeedThingy = currentFeed;

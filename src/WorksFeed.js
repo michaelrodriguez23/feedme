@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Iframe from "react-iframe";
 import data from "./data.js";
 const Arena = require("are.na");
-
-console.log(data);
 
 const Container = styled.div`
   margin: auto;
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
-  overflow-x: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 `;

@@ -1,6 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
+import { gsap } from "gsap";
+
 export function Contact() {
+  let emailIcon = useRef(null);
+  let contactForm = useRef(null);
+
+  useEffect(() => {
+    gsap.set(".contactForm", { x: 0, y: 400, scale: 0.7, opacity: 0 });
+
+    gsap.set(".emailIcon", { x: 0, y: -200, scale: 0.3, opacity: 0 });
+    gsap.to(".emailIcon", {
+      y: 0,
+      duration: 1.4,
+      scale: 1,
+      opacity: 1.2,
+      yoyo: true,
+    });
+    gsap.to(".contactForm", {
+      y: 0,
+      duration: 1,
+      scale: 1,
+      opacity: 0.9,
+      yoyo: true,
+    });
+  });
+
   const Info = styled.p`
     display: block;
     font-size: 4vh;
@@ -62,19 +87,19 @@ export function Contact() {
     font-family: Arial, Helvetica, sans-serif;
   `;
   return (
-    <ContactContainer>
+    <ContactContainer className="contactForm">
       <Form
         id="contactForm"
-        action="https://formsubmit.co/socialbug001@yahoo.com"
+        action="https://formsubmit.co/e16bb3ee82ad224e112d4e0bb818a77a"
         method="POST"
       >
         {" "}
-        <Header>📧</Header>
+        <Header className="emailIcon">📧</Header>
         <Input type="hidden" name="_next" value="" />
         <Input
           type="email"
           name="_captcha"
-          placeholder="placeholder@email.com"
+          placeholder="your-email@whatever.com"
           required
         />
         <Input type="hidden" name="_captcha" value="false" />
