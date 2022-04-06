@@ -10,6 +10,8 @@ const Container = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 50;
+  @media screen and (max-width: 450px) {
+  }
 `;
 
 const Title = styled.p`
@@ -75,13 +77,13 @@ const HeaderContainer = styled.div`
   padding-top: 1em;
 `;
 const List = styled.li`
+  padding-top: 5em;
   display: flex;
   flex-direction: column;
-  height: 90vh;
-  padding-top: 10vh;
+  height: 100vh;
 
   @media screen and (max-width: 450px) {
-    height: 90vw;
+    height: 90vh;
   }
 `;
 const HyperLink = styled.button`
