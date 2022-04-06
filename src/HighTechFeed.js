@@ -6,15 +6,14 @@ import PulseLoader from "react-spinners/PulseLoader";
 const Arena = require("are.na");
 
 const Photo = styled.img`
-  width: 30vw;
-  height: 30vw;
+  width: 40vw;
   object-fit: contain;
   display: block;
   margin: auto;
   border: 1.5px solid whitesmoke;
   filter: drop-shadow(1vh 1vh 2vh black);
   border-radius: 2em;
-  background-color: black;
+  background-color: whitesmoke;
   @media all and (max-width: 500px) {
     width: 40vw;
     height: 40vw;

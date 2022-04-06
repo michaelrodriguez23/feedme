@@ -75,11 +75,9 @@ export function Channels(props) {
 
   const data = [
     { id: 1, channel: "works" },
-    // { id: 2, channel: "pics" },
-    // { id: 3, channel: "listenings" },
-    { id: 4, channel: "mood" },
-    { id: 5, channel: "about" },
-    { id: 6, channel: "contact" },
+    { id: 2, channel: "mood" },
+    { id: 3, channel: "about" },
+    { id: 4, channel: "contact" },
   ];
 
   const feeds = {

@@ -12,15 +12,7 @@ import { Channels } from "./Channels";
 import { gsap } from "gsap";
 
 function App() {
-  // const [currentFeed, setCurrentFeed] = useState(<About />);
-
   const Container = styled.div``;
-
-  // const CurrentFeed = () => {
-  //   const CurrentFeedThingy = currentFeed;
-
-  //   return CurrentFeedThingy;
-  // };
 
   return (
     <Router>

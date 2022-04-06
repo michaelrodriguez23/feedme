@@ -9,8 +9,6 @@ const Container = styled.div`
   width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
 `;
 
 const Title = styled.p`
@@ -29,11 +27,11 @@ const Title = styled.p`
 const Caption = styled.p`
   font-size: 1em;
   width: 50vw;
-  padding-top: 1em;
   font-family: monospace;
   display: block;
   margin: auto;
   text-align: center;
+
   @media screen and (max-width: 450px) {
     font-size: 1.5vh;
     width: 80vw;
@@ -41,7 +39,8 @@ const Caption = styled.p`
 `;
 const CoverImage = styled.img`
   object-fit: contain;
-  width: 30vw;
+  width: 50vw;
+
   flex-grow: auto;
   @media screen and (max-width: 450px) {
     width: 50vw;
@@ -59,42 +58,47 @@ const SubImage2 = styled.img`
 `;
 const ImageContainer = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: center;
 `;
 const LinkContainer = styled.div`
-  padding-top: 1em;
   display: flex;
   justify-content: center;
   gap: 1em;
+  padding-top: 1em;
+`;
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-top: 1em;
 `;
 const List = styled.li`
   display: flex;
-  flex-direction: row;
-  text-decoration: none;
-  display: block;
-  height: 80vh;
+  flex-direction: column;
+  height: 90vh;
+  padding-top: 10vh;
+
   @media screen and (max-width: 450px) {
     height: 90vw;
   }
 `;
 const HyperLink = styled.button`
-  background-image: url("./assets/icons/see.png");
-  background-repeat: no-repeat;
-  background-color: white;
+  background: none;
   border: none;
   height: 2.6em;
   width: 2.6em;
-  transform: rotateZ(270deg);
+  font-weight: bold;
   &:hover {
     cursor: pointer;
 
-    transform: rotateZ(90deg);
+    transform: scale(1.2);
   }
 `;
 const BlogLink = styled.button`
-  background-image: url("./assets/icons/inspect.png");
   background-repeat: no-repeat;
-  background-color: white;
+  background: none;
+  font-weight: bold;
   border: none;
   height: 2.6em;
   width: 2.6em;
@@ -103,6 +107,7 @@ const BlogLink = styled.button`
     transform: scale(1.2);
   }
 `;
+
 const GithubLink = styled.button``;
 
 function MapWork(props) {
@@ -111,7 +116,11 @@ function MapWork(props) {
     <Container>
       <ul>
         {props.data.map((work, index) => (
-          <List key={work.id}>
+          <List
+            key={work.id}
+            style={{ backgroundColor: index % 2 == 1 ? "black" : "white" }}
+          >
+            {" "}
             <ImageContainer>
               <CoverImage src={process.env.PUBLIC_URL + work.images.cover} />
               {work.images.first ? (
@@ -121,12 +130,20 @@ function MapWork(props) {
                 <SubImage2 src={process.env.PUBLIC_URL + work.images.second} />
               ) : null}
             </ImageContainer>
-            <Title> {work.title} </Title>
-            <Caption> {work.description} </Caption>
-
+            <HeaderContainer
+              style={{ color: index % 2 == 1 ? "white" : "black" }}
+            >
+              <Title> {work.title} </Title>
+              <Caption> {work.description} </Caption>
+            </HeaderContainer>
             <LinkContainer>
-              <HyperLink></HyperLink>
-              <BlogLink></BlogLink>
+              <HyperLink style={{ color: index % 2 == 1 ? "white" : "black" }}>
+                Demo{" "}
+              </HyperLink>
+              <BlogLink style={{ color: index % 2 == 1 ? "white" : "black" }}>
+                {" "}
+                Repo
+              </BlogLink>
             </LinkContainer>
           </List>
         ))}

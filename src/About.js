@@ -58,7 +58,7 @@ export function About() {
   };
   useEffect(() => {
     typeWriter();
-    Playit();
+    // Playit();
   }, 100);
 
   return (

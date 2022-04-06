@@ -54,9 +54,9 @@ export function Contact() {
   `;
 
   const Input = styled.input`
-    height: 4vh;
+    height: 5vh;
     width: 40vw;
-    font-size: 3vh;
+    font-size: 5vh;
     border-radius: 0.2em;
     text-align: center;
     @media screen and (max-width: 450px) {
@@ -77,7 +77,7 @@ export function Contact() {
     text-align: center;
     font-size: 4vh;
     @media screen and (max-width: 450px) {
-      font-size: 3vh;
+      font-size: 2vh;
       width: 60vw;
     }
   `;
