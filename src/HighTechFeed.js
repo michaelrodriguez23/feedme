@@ -67,6 +67,9 @@ const DivContainer = styled.div`
   justify-content: space-between;
   overflow-x: scroll;
   overflow-y: scroll;
+  @media all and (max-width: 500px) {
+    padding-left: 0em;
+  }
 `;
 const ListWrapper = styled.div`
   width: 100vw;
@@ -77,7 +80,7 @@ const Header = styled.div`
   font-family: monospace;
   height: 10vh;
   position: fixed;
-  width: vh;
+  width: 50vh;
   padding-left: 1em;
   @media all and (max-width: 500px) {
     font-size: 2vh;
