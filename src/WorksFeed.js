@@ -9,6 +9,7 @@ const Container = styled.div`
   width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
+  z-index: 50;
 `;
 
 const Title = styled.p`
@@ -123,12 +124,12 @@ function MapWork(props) {
             {" "}
             <ImageContainer>
               <CoverImage src={process.env.PUBLIC_URL + work.images.cover} />
-              {work.images.first ? (
+              {/* {work.images.first ? (
                 <SubImage1 src={process.env.PUBLIC_URL + work.images.first} />
               ) : null}
               {work.images.first ? (
                 <SubImage2 src={process.env.PUBLIC_URL + work.images.second} />
-              ) : null}
+              ) : null} */}
             </ImageContainer>
             <HeaderContainer
               style={{ color: index % 2 == 1 ? "white" : "black" }}

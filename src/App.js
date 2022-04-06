@@ -9,11 +9,8 @@ import { PhotoFeed } from "./PhotoFeed";
 import { WorksFeed } from "./WorksFeed";
 import { HighTechFeed } from "./HighTechFeed";
 import { Channels } from "./Channels";
-import { gsap } from "gsap";
 
 function App() {
-  const Container = styled.div``;
-
   return (
     <Router>
       <Channels />

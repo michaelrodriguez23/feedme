@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import styled from "styled-components";
+import dateFormat, { masks } from "dateformat";
+import { format } from "date-fns";
 import PulseLoader from "react-spinners/PulseLoader";
 
 const Arena = require("are.na");
 
 const Photo = styled.img`
-  width: 40vw;
-  object-fit: contain;
+  width: 20vw;
+  object-fit: fill;
   display: block;
   margin: auto;
-  border: 1.5px solid whitesmoke;
-  filter: drop-shadow(1vh 1vh 2vh black);
-  border-radius: 2em;
-  background-color: whitesmoke;
+
+  filter: drop-shadow(0vh 0vh 2vh lightsteelblue);
+
   @media all and (max-width: 500px) {
     width: 40vw;
     height: 40vw;
@@ -26,27 +27,46 @@ const Photo = styled.img`
 `;
 
 const Caption = styled.p`
-  font-size: 1.3em;
-  width: 12em;
+  font-size: 0.9em;
+  width: 15em;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   margin: auto;
   text-align: center;
   text-decoration: none;
-  padding: 1em;
+  padding-top: 1em;
+  @media all and (max-width: 500px) {
+    font-size: 1em;
+  }
+`;
+const Dates = styled.p`
+  font-size: 0.8em;
+  width: 20em;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 1em;
   @media all and (max-width: 500px) {
     font-size: 1em;
   }
 `;
 
 const DivContainer = styled.div`
-  padding-top: 5em;
+  padding-top: 2em;
   display: flex;
-  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  overflow-x: hidden;
+  max-height: 10000px;
+  padding-left: 10em;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: scroll;
 `;
 const ListWrapper = styled.div`
   width: 100vw;
@@ -55,8 +75,9 @@ const Header = styled.div`
   color: lightsteelblue;
   font-size: 4vh;
   font-family: monospace;
+  height: 10vh;
   position: fixed;
-  width: 20vh;
+  width: vh;
   padding-left: 1em;
   @media all and (max-width: 500px) {
     font-size: 2vh;
@@ -64,13 +85,16 @@ const Header = styled.div`
   }
 `;
 const Wrapper = styled.div`
-  display: block;
-  width: 100%;
-  height: 700px;
-  overflow-y: auto;
-  max-height: 1000px;
+  width: 100vw;
+  height: 100vh;
+  max-height: 10000px;
   background-color: white;
 `;
+
+function formatDates(feed) {
+  let d = new Date(feed.created_at);
+  return (d = format(d, "PPPP"));
+}
 
 function MapFeed(props) {
   return (
@@ -85,20 +109,25 @@ function MapFeed(props) {
             .slice(0)
             .reverse()
             .filter((feed) => feed.image)
-            .map((feed, index) => (
-              <ListWrapper>
-                <List key={feed.id}>
-                  <a
-                    href={feed.source ? feed.source.url : null}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <Photo src={feed.image ? feed.image.display.url : null} />
-                    <Caption> {feed.title} </Caption>{" "}
-                  </a>
-                </List>
-              </ListWrapper>
-            ))}
+            .map((feed, index) => {
+              let d = formatDates(feed);
+
+              return (
+                <ListWrapper>
+                  <List key={feed.id}>
+                    <a
+                      href={feed.source ? feed.source.url : null}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <Photo src={feed.image ? feed.image.display.url : null} />
+                      <Caption> {feed.title} </Caption>
+                      <Dates>{d.toString()}</Dates>{" "}
+                    </a>
+                  </List>
+                </ListWrapper>
+              );
+            })}
         </DivContainer>
       </ul>
     </Wrapper>
@@ -117,7 +146,6 @@ const override = css`
 const List = styled.li`
   text-decoration: none;
   display: block;
-
   padding: 2em;
 `;
 

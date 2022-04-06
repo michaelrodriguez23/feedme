@@ -14,7 +14,6 @@ export function Channels(props) {
   let navBtn = useRef(null);
 
   useEffect(() => {
-    console.log(navBtn);
     gsap.set(".nav-btn", { x: 0, y: 350, opacity: 0 });
     gsap.to(".nav-btn", {
       stagger: 0.2,

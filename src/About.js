@@ -4,10 +4,10 @@ import styled from "styled-components";
 export function About() {
   var i = 0;
   var txt =
-    " is a web developer,film and augmented reality artist. Who is interested in the internet as an emerging social space. ";
+    " is a web developer who is interested in the internet as an emerging social space. ";
 
   /* The text */
-  var speed = 80; /* The speed/duration of the effect in milliseconds */
+  var speed = 60; /* The speed/duration of the effect in milliseconds */
 
   function typeWriter() {
     if (i < txt.length && document.getElementById("bio")) {
