@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import PulseLoader from "react-spinners/PulseLoader";
-import Networks from "./Networks.js";
+
 import { css } from "@emotion/react";
 import { gsap } from "gsap";
-import { links } from "./data.js";
 
 export function Contact() {
   let emailIcon = useRef(null);
@@ -56,7 +55,6 @@ export function Contact() {
   `;
 
   const ContactContainer = styled.div``;
-  const NetworkContainer = styled.div``;
 
   const Container = styled.div`
     display: flex;
@@ -121,10 +119,6 @@ export function Contact() {
     <>
       {!loading ? (
         <Container>
-          <NetworkContainer className="net">
-            <Networks links={links} />{" "}
-          </NetworkContainer>
-
           <ContactContainer className="contactForm">
             <Form
               id="contactForm"
@@ -143,7 +137,7 @@ export function Contact() {
               <Text
                 id="message"
                 name="message"
-                placeholder="Send your thoughts this way !"
+                placeholder="cool message goes here"
               ></Text>
               <Send type="submit" value="Send" />
             </Form>

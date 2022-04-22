@@ -12,7 +12,8 @@ const Networks = (props) => {
     border: 2px solid black;
     border-radius: 1em;
     padding: 1em;
-    width: 20%;
+    width: 100%;
+    z-index: -10;
     filter: opacity(90%);
 
     background-color: coral;
@@ -27,7 +28,7 @@ const Networks = (props) => {
     text-align: center;
 
     @media screen and (max-width: 450px) {
-      height: 90vh;
+      font-size: 0.9;
     }
   `;
 
@@ -37,6 +38,7 @@ const Networks = (props) => {
     padding-bottom: 0.2em;
 
     @media screen and (max-width: 450px) {
+      font-size: 1em;
     }
   `;
 

@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+
+import { gsap } from "gsap";
+import { links } from "./data.js";
+import Networks from "./Networks.js";
 import styled from "styled-components";
 
 export function About() {
@@ -20,6 +24,18 @@ export function About() {
     }
   }
 
+  useEffect(() => {
+    gsap.set(".net", { x: 0, y: 400, scale: 0.1, opacity: 0 });
+    gsap.to(".net", {
+      delay: 5,
+      x: 0,
+      y: 0,
+      duration: 1.5,
+      scale: 1,
+      opacity: 1,
+      yoyo: true,
+    });
+  });
   const Container = styled.div`
     background-color: white;
     height: 100vh;
@@ -37,8 +53,7 @@ export function About() {
     margin: 0;
 
     @media all and (max-width: 500px) {
-      font-size: 5vw;
-      padding-left: 1em;
+      font-size: 4vw;
     }
   `;
   const Me = styled.img`
@@ -50,6 +65,15 @@ export function About() {
 
     &:hover {
       filter: opacity(10%);
+    }
+  `;
+  const NetworkContainer = styled.div`
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    @media all and (max-width: 500px) {
+      bottom: 46%;
+      left: 46%;
     }
   `;
   let audioEl = new Audio("./assets/music/sound-on.mp4");
@@ -71,6 +95,10 @@ export function About() {
       <About id="bio">
         Michael Elijah <hr />
       </About>
+      <NetworkContainer className="net">
+        <Networks links={links} />
+      </NetworkContainer>
+
       <Me id="me" src={process.env.PUBLIC_URL + "/assets/img/me.png"} />
     </Container>
   );
