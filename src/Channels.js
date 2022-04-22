@@ -33,7 +33,7 @@ export function Channels(props) {
     gap: 3em;
     width: 100%;
     padding-top: 1em;
-    padding-bottom: 2em;
+    padding-bottom: 1.2em;
     justify-content: center;
     background-color: white;
     z-index: -5;

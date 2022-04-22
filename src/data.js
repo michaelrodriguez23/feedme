@@ -1,4 +1,4 @@
-export default [
+let data = [
   {
     id: 1,
     title: "Hydroponic System AR",
@@ -39,3 +39,20 @@ export default [
     },
   },
 ];
+
+let links = [
+  {
+    id: 1,
+    name: "are.na",
+    icon: "✶✶",
+    src: "https://www.are.na/meta-mike",
+  },
+  {
+    id: 2,
+    name: "instagram",
+    icon: "instagram",
+    src: "https://www.instagram.com/hi.its.michael",
+  },
+];
+
+export { data, links };

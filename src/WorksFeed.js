@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import data from "./data.js";
+import { data } from "./data.js";
 const Arena = require("are.na");
 
 const Container = styled.div`
@@ -90,7 +90,7 @@ const HyperLink = styled.button`
   background: none;
   border: none;
   height: 2.6em;
-  width: 2.6em;
+  width: 3.6em;
   font-weight: bold;
   &:hover {
     cursor: pointer;
@@ -104,7 +104,7 @@ const BlogLink = styled.button`
   font-weight: bold;
   border: none;
   height: 2.6em;
-  width: 2.6em;
+  width: 3.6em;
   &:hover {
     cursor: pointer;
     transform: scale(1.2);
