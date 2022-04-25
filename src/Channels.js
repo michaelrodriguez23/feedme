@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Contact } from "./Contact";
 import { About } from "./About";
-import { SongFeed } from "./SongFeed";
-import { PhotoFeed } from "./PhotoFeed";
+
 import { WorksFeed } from "./WorksFeed";
 import { HighTechFeed } from "./HighTechFeed";
 import { gsap } from "gsap";
@@ -51,9 +50,10 @@ export function Channels(props) {
   `;
   const Button = styled.button`
     padding: 1.2em;
-    border-color: lightcoral;
+    border-color: lime;
     border-radius: 20em;
-    filter: drop-shadow(1vh 1vh 1vh limegreen);
+    /* filter: drop-shadow(1vh 1vh 0.1vh grey); */
+
     background-color: white;
 
     @media all and (max-width: 500px) {
@@ -74,7 +74,7 @@ export function Channels(props) {
 
   const data = [
     { id: 1, channel: "works" },
-    { id: 2, channel: "mood" },
+    { id: 2, channel: "feed" },
     { id: 3, channel: "about" },
     { id: 4, channel: "contact" },
   ];
@@ -83,7 +83,7 @@ export function Channels(props) {
     works: <WorksFeed />,
     // pics: <PhotoFeed />,
     // listenings: <SongFeed />,
-    mood: <HighTechFeed />,
+    feed: <HighTechFeed />,
     about: <About />,
     contact: <Contact />,
   };

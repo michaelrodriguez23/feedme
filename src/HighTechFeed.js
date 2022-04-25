@@ -1,98 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import styled from "styled-components";
-import dateFormat, { masks } from "dateformat";
 import { format } from "date-fns";
+import {
+  Wrapper,
+  Header,
+  DivContainer,
+  ListWrapper,
+  Photo,
+  Caption,
+  Dates,
+  Container,
+  PulseLoaderContainer,
+} from "./styles/Feed.styled";
 import PulseLoader from "react-spinners/PulseLoader";
 
 const Arena = require("are.na");
-
-const Photo = styled.img`
-  width: 20vw;
-  object-fit: fill;
-  display: block;
-  margin: auto;
-
-  filter: drop-shadow(0vh 0vh 2vh lightsteelblue);
-
-  @media all and (max-width: 500px) {
-    width: 40vw;
-    height: 40vw;
-    border: 0.2em solid white;
-    transition: all ease 0.2s;
-  }
-  &:hover {
-    transform: scale(1.02);
-  }
-`;
-
-const Caption = styled.p`
-  font-size: 0.9em;
-  width: 15em;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  display: block;
-  margin: auto;
-  text-align: center;
-  text-decoration: none;
-  padding-top: 1em;
-  @media all and (max-width: 500px) {
-    font-size: 1em;
-  }
-`;
-const Dates = styled.p`
-  font-size: 0.8em;
-  width: 20em;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  display: block;
-  margin: auto;
-  text-align: center;
-  text-decoration: none;
-  padding-top: 1em;
-  @media all and (max-width: 500px) {
-    font-size: 1em;
-  }
-`;
-
-const DivContainer = styled.div`
-  padding-top: 2em;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  flex-wrap: wrap;
-  max-height: 10000px;
-  padding-left: 10em;
-  flex-direction: row;
-  justify-content: space-between;
-  overflow-x: scroll;
-  overflow-y: scroll;
-  @media all and (max-width: 500px) {
-    padding-left: 0em;
-  }
-`;
-const ListWrapper = styled.div`
-  width: 100vw;
-`;
-const Header = styled.div`
-  color: lightsteelblue;
-  font-size: 4vh;
-  font-family: monospace;
-  height: 10vh;
-  position: fixed;
-  width: 50vh;
-  padding-left: 1em;
-  @media all and (max-width: 500px) {
-    font-size: 2vh;
-    width: 5vh;
-  }
-`;
-const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
-  max-height: 10000px;
-  background-color: white;
-`;
 
 function formatDates(feed) {
   let d = new Date(feed.created_at);
@@ -138,9 +61,6 @@ function MapFeed(props) {
 }
 
 const override = css`
-  position: absolute;
-  top: 50%;
-  left: 45vw;
   @media screen and (max-width: 450px) {
     left: 30vw;
   }
@@ -177,16 +97,20 @@ export function HighTechFeed() {
   }, []);
 
   return (
-    <div>
-      <PulseLoader
-        color={color}
-        className={loading ? "fade-in" : "fade-out"}
-        loading={loading}
-        css={override}
-        size={50}
-      />
+    <>
+      <Container>
+        <PulseLoaderContainer>
+          <PulseLoader
+            color={color}
+            className={loading ? "fade-in" : "fade-out"}
+            loading={loading}
+            css={override}
+            size={60}
+          />
+        </PulseLoaderContainer>
 
-      {!loading ? <MapFeed feed={feed}> </MapFeed> : null}
-    </div>
+        {!loading ? <MapFeed feed={feed}> </MapFeed> : null}
+      </Container>
+    </>
   );
 }

@@ -50,7 +50,7 @@ let links = [
   {
     id: 2,
     name: "instagram",
-    icon: "instagram",
+    Icon: "instagram",
     src: "https://www.instagram.com/hi.its.michael",
   },
 ];
