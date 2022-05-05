@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import PulseLoader from "react-spinners/PulseLoader";
 import {
@@ -10,15 +10,12 @@ import {
   PulseLoaderContainer,
   Container,
   ContactContainer,
-  Info,
 } from "./styles/Contact.styled";
 
 import { css } from "@emotion/react";
 import { gsap } from "gsap";
 
 export function Contact() {
-  // let emailIcon = useRef(null);
-  // let contactForm = useRef(null);
   let [color, setColor] = useState("whitesmoke");
   let [loading, setLoading] = useState(true);
 
@@ -31,14 +28,6 @@ export function Contact() {
     gsap.set(".contactForm", { x: 0, y: 400, scale: 0.7, opacity: 0 });
     gsap.set(".emailIcon", { x: 0, y: -200, scale: 0.3, opacity: 0 });
     gsap.to(".emailIcon", {
-      delay: 0.5,
-      y: 0,
-      duration: 1.4,
-      scale: 1,
-      opacity: 1.2,
-      yoyo: true,
-    });
-    gsap.to(".net", {
       delay: 0.5,
       y: 0,
       duration: 1.4,
@@ -71,7 +60,9 @@ export function Contact() {
               action="https://formsubmit.co/e16bb3ee82ad224e112d4e0bb818a77a"
               method="POST"
             >
-              <Header className="emailIcon">📧</Header>
+              <Header className="emailIcon">
+                <span>📧 </span>{" "}
+              </Header>
               <Input type="hidden" name="_next" value="" />
               <Input
                 type="email"

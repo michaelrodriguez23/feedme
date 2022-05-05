@@ -6,22 +6,6 @@ const Container = styled.div`
   background-color: white;
   height: 100vh;
 `;
-
-// const Bio = styled.p`
-//   font-family: monospace !important;
-//   position: relative;
-//   left: 1vw;
-//   font-size: 4.4vw;
-//   color: lightcoral;
-//   width: 80vw;
-//   height: 100vw;
-//   padding: 1em;
-//   margin: 0;
-
-//   @media all and (max-width: 500px) {
-//     font-size: 4vw;
-//   }
-// `;
 const Me = styled.img`
   position: absolute;
   bottom: 0%;

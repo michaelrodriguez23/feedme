@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { data } from "./data.js";
 import {
@@ -8,8 +8,6 @@ import {
   HeaderContainer,
   ImageContainer,
   LinkContainer,
-  SubImage1,
-  SubImage2,
   CoverImage,
   Caption,
   Title,
@@ -26,7 +24,7 @@ function MapWork(props) {
         {props.data.map((work, index) => (
           <List
             key={work.id}
-            style={{ backgroundColor: index % 2 == 1 ? "black" : "white" }}
+            style={{ backgroundColor: index % 2 === 1 ? "black" : "white" }}
           >
             {" "}
             <ImageContainer>
@@ -39,16 +37,16 @@ function MapWork(props) {
               ) : null} */}
             </ImageContainer>
             <HeaderContainer
-              style={{ color: index % 2 == 1 ? "white" : "black" }}
+              style={{ color: index % 2 === 1 ? "white" : "black" }}
             >
               <Title> {work.title} </Title>
               <Caption> {work.description} </Caption>
             </HeaderContainer>
             <LinkContainer>
-              <HyperLink style={{ color: index % 2 == 1 ? "white" : "black" }}>
+              <HyperLink style={{ color: index % 2 === 1 ? "white" : "black" }}>
                 Demo{" "}
               </HyperLink>
-              <BlogLink style={{ color: index % 2 == 1 ? "white" : "black" }}>
+              <BlogLink style={{ color: index % 2 === 1 ? "white" : "black" }}>
                 {" "}
                 Repo
               </BlogLink>

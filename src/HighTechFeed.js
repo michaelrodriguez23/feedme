@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
-import styled from "styled-components";
 import { format } from "date-fns";
+import PulseLoader from "react-spinners/PulseLoader";
 import {
   Wrapper,
   Header,
   DivContainer,
   ListWrapper,
+  List,
   Photo,
   Caption,
   Dates,
   Container,
   PulseLoaderContainer,
 } from "./styles/Feed.styled";
-import PulseLoader from "react-spinners/PulseLoader";
 
 const Arena = require("are.na");
 
@@ -44,7 +44,7 @@ function MapFeed(props) {
                     <a
                       href={feed.source ? feed.source.url : null}
                       target="_blank"
-                      rel="noopener"
+                      rel="noopener noreferrer"
                     >
                       <Photo src={feed.image ? feed.image.display.url : null} />
                       <Caption> {feed.title} </Caption>
@@ -64,12 +64,6 @@ const override = css`
   @media screen and (max-width: 450px) {
     left: 30vw;
   }
-`;
-
-const List = styled.li`
-  text-decoration: none;
-  display: block;
-  padding: 2em;
 `;
 
 export function HighTechFeed() {

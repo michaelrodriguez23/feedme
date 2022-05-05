@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect } from "react";
 import {
   Bio,
   Container,
@@ -6,7 +6,6 @@ import {
   Me,
   Box,
   Text,
-  Hi,
 } from "./styles/About.styled.js";
 import { gsap } from "gsap";
 import { RoughEase } from "gsap/dist/EasePack";
@@ -14,14 +13,10 @@ import { TextPlugin } from "gsap/dist/TextPlugin";
 
 import { links } from "./data.js";
 import Networks from "./Networks.js";
-import { WorksFeed } from "./WorksFeed.js";
 
 export function About() {
-  var i = 0;
-  var words = [
-    "Hi!",
-    "",
-    "Im Michael Elijah",
+  let words = [
+    "Michael Elijah",
     "a programmer ",
     "an artist",
     "",

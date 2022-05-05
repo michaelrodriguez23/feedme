@@ -1,16 +1,22 @@
-import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
+import React, { useState, useEffect, useRef } from "react";
 import { Contact } from "./Contact";
 import { About } from "./About";
-
+import { ListItem, UnorderedList, Button } from "./styles/Channels.styled";
 import { WorksFeed } from "./WorksFeed";
 import { HighTechFeed } from "./HighTechFeed";
 import { gsap } from "gsap";
-
 import { Link } from "react-router-dom";
 
 export function Channels(props) {
+  let [pressed, setPressed] = useState(false);
   let navBtn = useRef(null);
+
+  const data = [
+    { id: 1, channel: "works" },
+    { id: 2, channel: "feed" },
+    { id: 3, channel: "about" },
+    { id: 4, channel: "contact" },
+  ];
 
   useEffect(() => {
     gsap.set(".nav-btn", { x: 0, y: 350, opacity: 0 });
@@ -24,60 +30,14 @@ export function Channels(props) {
     });
   });
 
-  const UnorderedList = styled.ul`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-around;
-    gap: 3em;
-    width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1.2em;
-    justify-content: center;
-    background-color: white;
-    z-index: -5;
-    @media all and (max-width: 500px) {
-      gap: 1em;
-      padding-left: 0;
-      padding-right: 0;
-      padding-bottom: 2em;
+  function toggleButtonState() {
+    console.log("pressed");
+    if (pressed) {
+      setPressed(false);
+    } else {
+      setPressed(true);
     }
-  `;
-  const ListItem = styled.li`
-    font-size: 4vw;
-    color: black;
-    list-style: none;
-  `;
-  const Button = styled.button`
-    padding: 1.2em;
-    border-color: lime;
-    border-radius: 20em;
-    /* filter: drop-shadow(1vh 1vh 0.1vh grey); */
-
-    background-color: white;
-
-    @media all and (max-width: 500px) {
-      /* padding: 0.5em;
-      font-size: 1.5em;
-      gap: 0; */
-    }
-    & :hover {
-      filter: blur(0.02em);
-      color: yellowgreen;
-      border-color: whitesmoke;
-    }
-  `;
-
-  function List(props) {
-    return <ListItem className="li-chan">{props.channel}</ListItem>;
   }
-
-  const data = [
-    { id: 1, channel: "works" },
-    { id: 2, channel: "feed" },
-    { id: 3, channel: "about" },
-    { id: 4, channel: "contact" },
-  ];
 
   const feeds = {
     works: <WorksFeed />,
@@ -90,15 +50,25 @@ export function Channels(props) {
 
   const handleClick = (e) => props.changeFeed(feeds[e.target.innerText]);
 
+  function List(props) {
+    return <ListItem className="li-chan">{props.channel}</ListItem>;
+  }
   return (
     <>
       <UnorderedList>
         {data.map(({ id, channel }, index) => {
           return (
             <div>
-              <Link to={"/" + channel}>
-                <Button ref={(el) => (navBtn = el)} className="nav-btn">
-                  <List channel={channel}></List>
+              <Link key={id} to={"/" + channel}>
+                <Button
+                  // onClick={toggleButtonState}
+                  // buttonValue={
+                  //   pressed ? "drop-shadow(0.5vw 0.5vw 0.1vw red);" : "none"
+                  // }
+                  ref={(el) => (navBtn = el)}
+                  className="nav-btn"
+                >
+                  <List key={data.id} channel={channel}></List>
                 </Button>
               </Link>
             </div>

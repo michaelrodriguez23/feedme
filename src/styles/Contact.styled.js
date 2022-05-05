@@ -11,9 +11,7 @@ const Info = styled.p`
   width: 100%;
 `;
 
-const ContactContainer = styled.div`
-  font-size: 0;
-`;
+const ContactContainer = styled.div``;
 
 const Container = styled.div`
   display: flex;
@@ -28,9 +26,9 @@ const PulseLoaderContainer = styled.div`
 `;
 
 const Form = styled.form`
-  padding-top: 4em;
+  padding-top: 10em;
   width: 100vw;
-  height: 60vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,29 +39,27 @@ const Form = styled.form`
 const Input = styled.input`
   height: 5vh;
   width: 40vw;
-  font-size: 5vh;
+  font-size: 2vw;
   border-radius: 0.2em;
   text-align: center;
   margin: 0.5em;
   @media screen and (max-width: 450px) {
-    font-size: 4vh;
+    font-size: 6vw;
     width: 60vw;
   }
 `;
 const Send = styled.input`
-  height: 3vh;
-  width: 10vh;
-  font-size: 2vh;
   margin: 0.5em;
 `;
 const Text = styled.textarea`
-  height: 10vh;
+  height: 20vh;
   width: 40vw;
+  font-size: 2vw;
   border-radius: 0.2em;
   text-align: center;
-  font-size: 4vh;
+
   @media screen and (max-width: 450px) {
-    font-size: 2vh;
+    font-size: 4vw;
     width: 60vw;
   }
 `;

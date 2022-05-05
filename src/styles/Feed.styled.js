@@ -17,7 +17,11 @@ const Photo = styled.img`
     transform: scale(1.02);
   }
 `;
-
+const List = styled.li`
+  text-decoration: none;
+  display: block;
+  padding: 2em;
+`;
 const Caption = styled.p`
   font-size: 0.9em;
   width: 15em;
@@ -104,6 +108,7 @@ export {
   Header,
   DivContainer,
   ListWrapper,
+  List,
   Photo,
   Caption,
   Dates,
