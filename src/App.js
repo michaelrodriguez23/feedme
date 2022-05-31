@@ -26,7 +26,7 @@ export function App() {
             changeEmailState={(emailActive) => setEmailActive(emailActive)}
           />
         ) : null}
-        {active ? <Route path="/Feed" component={Feeds} /> : <About />}
+        {active ? <Feeds /> : <About />}
 
         {/* <Route path="/Contact" component={Contact} /> */}
 
