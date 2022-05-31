@@ -42,16 +42,22 @@ let data = [
 
 let links = [
   {
+    id: 0,
+    name: "instagram",
+    Icon: "instagram",
+    src: "https://www.instagram.com/hi.its.michael",
+  },
+  {
     id: 1,
     name: "are.na",
     icon: "✶✶",
     src: "https://www.are.na/meta-mike",
   },
   {
-    id: 2,
-    name: "instagram",
-    Icon: "instagram",
-    src: "https://www.instagram.com/hi.its.michael",
+    id: 3,
+    name: "urbit",
+    Icon: "",
+    src: "",
   },
 ];
 

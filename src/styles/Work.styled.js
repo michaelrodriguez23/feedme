@@ -6,7 +6,7 @@ const Container = styled.div`
   width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
-  z-index: 50;
+
   @media screen and (max-width: 450px) {
   }
 `;
@@ -21,7 +21,7 @@ const Title = styled.p`
     padding-top: 1em;
     font-size: 1.2em;
     font-weight: 700;
-    width: 90vw;
+    width: 80vw;
   }
 `;
 const Caption = styled.p`
@@ -34,7 +34,8 @@ const Caption = styled.p`
 
   @media screen and (max-width: 450px) {
     font-size: 1.5vh;
-    width: 80vw;
+    width: 60vw;
+    height: 20vw;
   }
 `;
 const CoverImage = styled.img`
@@ -48,7 +49,7 @@ const CoverImage = styled.img`
 `;
 const SubImage1 = styled.img`
   object-fit: contain;
-  width: 30vw;
+  width: 40vw;
   flex-grow: auto;
 `;
 const SubImage2 = styled.img`
@@ -60,6 +61,7 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 100vh;
 `;
 const LinkContainer = styled.div`
   display: flex;
@@ -80,7 +82,7 @@ const List = styled.li`
   height: 100vh;
 
   @media screen and (max-width: 450px) {
-    height: 90vh;
+    height: 40vh;
   }
 `;
 const HyperLink = styled.button`

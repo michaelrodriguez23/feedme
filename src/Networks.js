@@ -5,7 +5,7 @@ const Networks = (props) => {
   return (
     <Container>
       <ul>
-        <Header>[channels]</Header>
+        <Header>[ports]</Header>
         {props.links.map((link, index) => (
           <List key={link.id}>
             {" "}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { data } from "./data.js";
+
 import {
   BlogLink,
   HyperLink,

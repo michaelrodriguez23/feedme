@@ -37,7 +37,7 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-  height: 5vh;
+  height: 3vh;
   width: 40vw;
   font-size: 2vw;
   border-radius: 0.2em;

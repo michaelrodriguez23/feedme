@@ -12,7 +12,9 @@ const Me = styled.img`
   right: 1%;
   height: 50%;
   transition: ease-out 0.4s;
-
+  @media all and (max-width: 500px) {
+    height: 30%;
+  }
   &:hover {
     filter: opacity(10%);
   }
@@ -27,8 +29,17 @@ const NetworkContainer = styled.div`
   }
 `;
 
-const Box = styled.span`
+const ChannelsBox = styled.span`
   position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background: coral;
+  height: 0.5vw;
+  z-index: -2;
+`;
+const FeedsBox = styled.span`
+  position: absolute;
+  left: 5em;
   bottom: 0;
   display: inline-block;
   background: coral;
@@ -52,5 +63,27 @@ const Bio = styled.div`
   padding-bottom: 35vh;
   z-index: 2;
 `;
+const FeedContainer = styled.div`
+  font-family: monospace;
+  text-align: center;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 1em;
+  padding: 1em;
+  width: 100%;
+  z-index: -10;
+  filter: opacity(90%);
+`;
 
-export { Bio, Container, NetworkContainer, Me, Cursor, Text, Hi, Box };
+export {
+  Bio,
+  Container,
+  NetworkContainer,
+  FeedContainer,
+  Me,
+  Cursor,
+  Text,
+  Hi,
+  ChannelsBox,
+  FeedsBox,
+};

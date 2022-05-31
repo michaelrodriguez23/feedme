@@ -91,6 +91,7 @@ const Header = styled.div`
   position: fixed;
   width: 50vh;
   padding-left: 1em;
+  margin-top: 5em;
   @media all and (max-width: 500px) {
     font-size: 2vh;
     width: 5vh;

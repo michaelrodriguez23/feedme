@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
+import { Contact } from "./Contact";
 import {
   Bio,
   Container,
   NetworkContainer,
+  FeedContainer,
   Me,
-  Box,
+  ChannelsBox,
+  FeedsBox,
   Text,
 } from "./styles/About.styled.js";
 import { gsap } from "gsap";
@@ -16,33 +19,21 @@ import Networks from "./Networks.js";
 
 export function About() {
   let words = [
-    "Michael Elijah",
-    "a programmer ",
-    "an artist",
     "",
-    "who is interested in the web",
+    "🫠 heyyyyyyyyyyyyy",
+    "🫠",
+    "im elijah",
     "",
-    "as a means of exploration within",
+    "i am interested in the web",
+    "and computers",
     "",
-    "cybernetics,",
-    "decentralized protocols",
-    "free culture [foss]",
-    "and self expression!",
-    "",
-    "😈",
-    "",
-    "Feel free to look around!",
-    "",
-    "",
-    "",
-    "",
-    "",
+    "I like to make stuff",
     "",
   ];
 
   useEffect(() => {
     gsap.registerPlugin(TextPlugin, RoughEase);
-    gsap.set(".net", { y: 200 });
+    gsap.set(".net", { y: 300 });
     gsap.to(".net", {
       delay: 1,
       x: 0,
@@ -74,23 +65,18 @@ export function About() {
 
     words.forEach((word) => {
       let tl = gsap.timeline();
-      tl.to(".bio", { duration: 1.5, text: word });
+      tl.to(".bio", { duration: 1.6, text: word });
       masterTL.add(tl);
     });
   });
 
   return (
     <Container>
-      {/* <audio className="audio-element">
-        <source
-          src={process.env.PUBLIC_URL + "/assets/music/sound-on.mp4"}
-        ></source>
-      </audio> */}
       <Me id="me" src={process.env.PUBLIC_URL + "/assets/img/me.png"} />
+
       <Bio className="michael">
-        <Box className="box"></Box>
+        <ChannelsBox className="box"></ChannelsBox>
         <Text className="bio"></Text>
-        <span className="cursor"> _</span>
       </Bio>
 
       <NetworkContainer className="net">

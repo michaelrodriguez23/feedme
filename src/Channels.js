@@ -12,10 +12,10 @@ export function Channels(props) {
   let navBtn = useRef(null);
 
   const data = [
-    { id: 1, channel: "works" },
-    { id: 2, channel: "feed" },
-    { id: 3, channel: "about" },
-    { id: 4, channel: "contact" },
+    // { id: 1, channel: "works" },
+    // { id: 2, channel: "feed" },
+    // { id: 3, channel: "about" },
+    // { id: 4, channel: "contact" },
   ];
 
   useEffect(() => {
@@ -40,12 +40,12 @@ export function Channels(props) {
   }
 
   const feeds = {
-    works: <WorksFeed />,
+    // works: <WorksFeed />,
     // pics: <PhotoFeed />,
     // listenings: <SongFeed />,
-    feed: <HighTechFeed />,
-    about: <About />,
-    contact: <Contact />,
+    // feed: <HighTechFeed />,
+    // about: <About />,
+    // contact: <Contact />,
   };
 
   const handleClick = (e) => props.changeFeed(feeds[e.target.innerText]);

@@ -1,23 +1,38 @@
 import "./App.css";
-import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+import { EmailButton } from "./EmailButton";
 import { Contact } from "./Contact";
 import { About } from "./About";
-
+import { Slider } from "./Slider";
 import { WorksFeed } from "./WorksFeed";
-import { HighTechFeed } from "./HighTechFeed";
-import { Channels } from "./Channels";
 
-function App() {
+import { Feeds } from "./Feeds";
+import { Channels } from "./Channels";
+import React, { useState } from "react";
+
+export function App() {
+  const [active, setActive] = useState(false);
+  const [emailActive, setEmailActive] = useState(false);
+
+  console.log(emailActive);
   return (
-    <Router>
-      <Channels />
-      <Route path="/About" component={About} />
-      <Route path="/Contact" component={Contact} />
-      <Route path="/Feed" component={HighTechFeed} />
-      <Route path="/Works" component={WorksFeed} />
-    </Router>
+    <div>
+      <Router>
+        {/* <Channels /> */}
+        <Slider changeSliderState={(active) => setActive(active)} />
+        {!active ? (
+          <EmailButton
+            changeEmailState={(emailActive) => setEmailActive(emailActive)}
+          />
+        ) : null}
+        {active ? <Route path="/Feed" component={Feeds} /> : <About />}
+
+        {/* <Route path="/Contact" component={Contact} /> */}
+
+        {/* <Route path="/Works" component={WorksFeed} /> */}
+      </Router>
+    </div>
   );
 }
 

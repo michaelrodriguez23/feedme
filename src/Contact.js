@@ -61,7 +61,7 @@ export function Contact() {
               method="POST"
             >
               <Header className="emailIcon">
-                <span>📧 </span>{" "}
+                <span>📧</span>
               </Header>
               <Input type="hidden" name="_next" value="" />
               <Input
