@@ -18,9 +18,9 @@ const Icon = styled.div`
 function EmailButton(props) {
   return (
     <div>
-      <Icon onClick={(emailActive) => !props.changeEmailState(emailActive)}>
-        📧
-      </Icon>
+      {/* <Icon onClick={(emailActive) => !props.changeEmailState(emailActive)}>
+        <span> 📧 <span/>
+      </Icon> */}
     </div>
   );
 }

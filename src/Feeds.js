@@ -7,7 +7,6 @@ import { PhotoFeed } from "./PhotoFeed";
 function Feeds() {
   const [active, setActive] = React.useState(0);
 
-  console.log(active);
   return (
     <div>
       <RadioButtons changeRadioState={(active) => setActive(active)} />

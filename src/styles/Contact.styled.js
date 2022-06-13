@@ -32,24 +32,25 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
-  margin: auto;
+  gap: 1em;
+  margin: 0;
 `;
 
 const Input = styled.input`
   height: 3vh;
   width: 40vw;
+  margin: 0;
   font-size: 2vw;
   border-radius: 0.2em;
   text-align: center;
-  margin: 0.5em;
+
   @media screen and (max-width: 450px) {
     font-size: 6vw;
     width: 60vw;
   }
 `;
 const Send = styled.input`
-  margin: 0.5em;
+  margin: 0;
 `;
 const Text = styled.textarea`
   height: 20vh;

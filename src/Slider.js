@@ -6,6 +6,7 @@ const SliderWrapper = styled.div`
   position: absolute;
   right: 1em;
   top: 1em;
+  z-index: 10;
 `;
 
 function Slider(props) {

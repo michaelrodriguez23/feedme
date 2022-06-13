@@ -53,6 +53,7 @@ const Dates = styled.p`
 
 const DivContainer = styled.div`
   padding-top: 2em;
+  border: 10px solid red;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -63,6 +64,7 @@ const DivContainer = styled.div`
   justify-content: space-between;
   overflow-x: scroll;
   overflow-y: scroll;
+  z-index: 10;
   @media all and (max-width: 500px) {
     padding-left: 0em;
   }
@@ -102,6 +104,7 @@ const Wrapper = styled.div`
   height: 100vh;
   max-height: 10000px;
   background-color: white;
+  z-index: -1;
 `;
 
 export {

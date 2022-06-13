@@ -17,23 +17,12 @@ import { TextPlugin } from "gsap/dist/TextPlugin";
 import { links } from "./data.js";
 import Networks from "./Networks.js";
 
-export function About() {
-  let words = [
-    "",
-    "🫠 heyyyyyyyyyyyyy",
-    "🫠",
-    "im elijah",
-    "",
-    "i am interested in the web",
-    "and computers",
-    "",
-    "I like to make stuff",
-    "",
-  ];
+export function About({ emailActive }) {
+  // let words = ["🫣", "🫣"];
 
   useEffect(() => {
-    gsap.registerPlugin(TextPlugin, RoughEase);
-    gsap.set(".net", { y: 300 });
+    // gsap.registerPlugin(TextPlugin, RoughEase);
+    gsap.set(".net", { x: -400 });
     gsap.to(".net", {
       delay: 1,
       x: 0,
@@ -55,29 +44,31 @@ export function About() {
       ease: "rough",
       onComplete: () => masterTL.play(),
     });
-
     let masterTL = gsap.timeline({
       delay: 0.4,
       repeat: -1,
       repeatDelay: -1,
       onComplete: () => masterTL.pause(),
     });
-
-    words.forEach((word) => {
-      let tl = gsap.timeline();
-      tl.to(".bio", { duration: 1.6, text: word });
-      masterTL.add(tl);
-    });
+    // words.forEach((word) => {
+    //   let tl = gsap.timeline();
+    //   tl.to(".bio", { duration: 1.6, text: word });
+    //   masterTL.add(tl);
+    // });
   });
 
   return (
     <Container>
       <Me id="me" src={process.env.PUBLIC_URL + "/assets/img/me.png"} />
 
-      <Bio className="michael">
-        <ChannelsBox className="box"></ChannelsBox>
-        <Text className="bio"></Text>
-      </Bio>
+      {emailActive ? (
+        <Contact />
+      ) : (
+        <Bio className="michael">
+          <ChannelsBox className="box"></ChannelsBox>
+          <Text className="bio"></Text>
+        </Bio>
+      )}
 
       <NetworkContainer className="net">
         <Networks links={links} />

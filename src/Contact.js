@@ -26,7 +26,7 @@ export function Contact() {
 
   useEffect(() => {
     gsap.set(".contactForm", { x: 0, y: 400, scale: 0.7, opacity: 0 });
-    gsap.set(".emailIcon", { x: 0, y: -200, scale: 0.3, opacity: 0 });
+    gsap.set(".emailIcon", { x: 0, y: -400, scale: 0.3, opacity: 0 });
     gsap.to(".emailIcon", {
       delay: 0.5,
       y: 0,
@@ -52,43 +52,24 @@ export function Contact() {
 
   return (
     <>
-      {!loading ? (
-        <Container>
-          <ContactContainer className="contactForm">
-            <Form
-              id="contactForm"
-              action="https://formsubmit.co/e16bb3ee82ad224e112d4e0bb818a77a"
-              method="POST"
-            >
-              <Header className="emailIcon">
-                <span>📧</span>
-              </Header>
-              <Input type="hidden" name="_next" value="" />
-              <Input
-                type="email"
-                name="_captcha"
-                placeholder="email"
-                required
-              />
-              <Input type="hidden" name="_captcha" value="false" />
-              <Text id="message" name="message" placeholder="message"></Text>
-              <Send type="submit" value="Send" />
-            </Form>
-          </ContactContainer>
-        </Container>
-      ) : (
-        <Container>
-          <PulseLoaderContainer>
-            <PulseLoader
-              color={color}
-              className={loading ? "fade-in" : "fade-out"}
-              loading={loading}
-              css={override}
-              size={50}
-            />
-          </PulseLoaderContainer>
-        </Container>
-      )}
+      <Container>
+        <ContactContainer className="contactForm">
+          <Form
+            id="contactForm"
+            action="https://formsubmit.co/e16bb3ee82ad224e112d4e0bb818a77a"
+            method="POST"
+          >
+            <Header className="emailIcon">
+              <span>📧</span>
+            </Header>
+            <Input type="hidden" name="_next" value="" />
+            <Input type="email" name="_captcha" placeholder="email" required />
+            <Input type="hidden" name="_captcha" value="false" />
+            <Text id="message" name="message" placeholder="message"></Text>
+            <Send type="submit" value="Send" />
+          </Form>
+        </ContactContainer>
+      </Container>
     </>
   );
 }

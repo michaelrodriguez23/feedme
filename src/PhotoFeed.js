@@ -3,6 +3,13 @@ import styled from "styled-components";
 import { css } from "@emotion/react";
 import { PulseLoaderContainer } from "./styles/Feed.styled";
 import PulseLoader from "react-spinners/PulseLoader";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade } from "swiper";
+import "./styles/swiper.css";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+
+// import "swiper/css/navigation";
 const Arena = require("are.na");
 let token = process.env.REACT_APP_ARENA_KEY;
 
@@ -12,8 +19,9 @@ const arena = new Arena({
 
 const override = css`
   @media screen and (max-width: 450px) {
-    left: 50vw;
-    top: 20vh;
+    position: absolute;
+    left: 30vw;
+    top: 70vw;
   }
 `;
 const Loading = styled.img`
@@ -25,24 +33,12 @@ const Loading = styled.img`
     width: 50vw;
   }
 `;
-
-const Photo = styled.img`
-  height: 25em;
-  width: 25em;
-
-  object-fit: contain;
-  @media screen and (max-width: 500px) {
-  }
+const DivContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
 `;
-const Caption = styled.p`
-  font-size: 1vmin;
-  font-family: Helvetica, sans-serif;
-  text-align: center;
-  padding: 0;
-`;
-const DivContainer = styled.div``;
 const DivFlex = styled.div`
-  padding: 1fuem;
+  padding: 1em;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -102,25 +98,20 @@ export function PhotoFeed() {
       </PulseLoaderContainer>
     );
   }
-  if (gallery.length == 1) {
-    AppendPhoto();
-  }
 
   function Galleries() {
     return (
-      <>
-        <DivFlex>
+      <DivContainer>
+        <Swiper className="mySwiper">
           {photos.map((photo, index) => (
-            <Photo src={photo.image ? photo.image.display.url : null} />
+            <SwiperSlide key={index}>
+              <img src={photo.image ? photo.image.display.url : null} />
+            </SwiperSlide>
           ))}
-        </DivFlex>
-      </>
+        </Swiper>
+      </DivContainer>
     );
   }
 
-  return (
-    <DivContainer onClick={AppendPhoto} photos={photos}>
-      <Galleries gallery={gallery}> </Galleries>
-    </DivContainer>
-  );
+  return <Galleries gallery={gallery}> </Galleries>;
 }

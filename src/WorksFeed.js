@@ -17,7 +17,7 @@ import {
 
 const GithubLink = styled.button``;
 
-function MapWork(props) {
+function MapWork(props) { 
   let [work, setWork] = useState([data]);
   return (
     <Container>

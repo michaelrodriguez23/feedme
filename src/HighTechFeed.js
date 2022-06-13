@@ -25,6 +25,7 @@ function formatDates(feed) {
 function MapFeed(props) {
   return (
     <Wrapper>
+      <h1> hey</h1>
       <Header>
         <p> The Weekly Link Digest</p>
       </Header>
@@ -62,7 +63,7 @@ function MapFeed(props) {
 
 const override = css`
   @media screen and (max-width: 450px) {
-    left: 30vw;
+    /* left: 30vw; */
   }
 `;
 
@@ -93,7 +94,7 @@ export function HighTechFeed() {
   return (
     <>
       <Container>
-        <PulseLoaderContainer>
+        {/* <PulseLoaderContainer>
           <PulseLoader
             color={color}
             className={loading ? "fade-in" : "fade-out"}
@@ -101,9 +102,13 @@ export function HighTechFeed() {
             css={override}
             size={60}
           />
-        </PulseLoaderContainer>
+        </PulseLoaderContainer> */}
 
-        {!loading ? <MapFeed feed={feed}> </MapFeed> : null}
+        {!loading ? (
+          <MapFeed feed={feed}>
+            <p> hey</p>
+          </MapFeed>
+        ) : null}
       </Container>
     </>
   );

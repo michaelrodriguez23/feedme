@@ -12,21 +12,20 @@ import { Channels } from "./Channels";
 import React, { useState } from "react";
 
 export function App() {
-  const [active, setActive] = useState(false);
-  const [emailActive, setEmailActive] = useState(false);
+  const [active, setActive] = useState(true);
+  const [emailActive, setEmailActive] = useState(true);
 
-  console.log(emailActive);
   return (
     <div>
       <Router>
         {/* <Channels /> */}
         <Slider changeSliderState={(active) => setActive(active)} />
-        {!active ? (
+        {/* {!active ? (
           <EmailButton
             changeEmailState={(emailActive) => setEmailActive(emailActive)}
           />
-        ) : null}
-        {active ? <Feeds /> : <About />}
+        ) : null} */}
+        {active ? <Feeds /> : <About emailActive={emailActive} />}
 
         {/* <Route path="/Contact" component={Contact} /> */}
 
