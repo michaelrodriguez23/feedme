@@ -18,8 +18,6 @@ import { links } from "./data.js";
 import Networks from "./Networks.js";
 
 export function About({ emailActive }) {
-  // let words = ["🫣", "🫣"];
-
   useEffect(() => {
     // gsap.registerPlugin(TextPlugin, RoughEase);
     gsap.set(".net", { x: -400 });
@@ -50,11 +48,6 @@ export function About({ emailActive }) {
       repeatDelay: -1,
       onComplete: () => masterTL.pause(),
     });
-    // words.forEach((word) => {
-    //   let tl = gsap.timeline();
-    //   tl.to(".bio", { duration: 1.6, text: word });
-    //   masterTL.add(tl);
-    // });
   });
 
   return (

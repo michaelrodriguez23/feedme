@@ -12,8 +12,8 @@ import { Channels } from "./Channels";
 import React, { useState } from "react";
 
 export function App() {
-  const [active, setActive] = useState(true);
-  const [emailActive, setEmailActive] = useState(true);
+  const [active, setActive] = useState(false);
+  const [emailActive, setEmailActive] = useState(false);
 
   return (
     <div>

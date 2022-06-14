@@ -20,7 +20,7 @@ const List = styled.li`
   display: flex;
   flex-direction: column;
   font-size: 1.5em;
-  text-align: center;
+  text-align: left;
 
   @media screen and (max-width: 450px) {
     font-size: 0.9;

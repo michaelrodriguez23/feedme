@@ -21,7 +21,7 @@ const UnorderedList = styled.ul`
 `;
 const ListItem = styled.li`
   font-size: 4vw;
-  color: black;
+  color: green;
   list-style: none;
 `;
 const Button = styled.button`

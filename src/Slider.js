@@ -4,7 +4,7 @@ import { ToggleSlider } from "react-toggle-slider";
 
 const SliderWrapper = styled.div`
   position: absolute;
-  right: 1em;
+  right: 2em;
   top: 1em;
   z-index: 10;
 `;
@@ -15,10 +15,10 @@ function Slider(props) {
       <ToggleSlider
         handleBackgroundColor="#fff"
         draggable={true}
-        barHeight={22}
-        barWidth={46}
-        handleSize={16}
-        handleBorderRadius={32}
+        barHeight={32}
+        barWidth={66}
+        handleSize={26}
+        handleBorderRadius={42}
         syles="position: absolute; left:1px;"
         onToggle={(active) => props.changeSliderState(active)}
       />
