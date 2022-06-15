@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { data } from "./data.js";
 
+import { gsap } from "gsap";
 import {
   BlogLink,
   HyperLink,
@@ -17,10 +18,15 @@ import {
 
 const GithubLink = styled.button``;
 
-function MapWork(props) { 
+function MapWork(props) {
   let [work, setWork] = useState([data]);
+  useEffect(() => {
+    gsap.set(".FeedContainer", { opacity: 0 });
+    gsap.to(".FeedContainer", { duration: 3, opacity: 1 });
+  });
+
   return (
-    <Container>
+    <Container className="FeedContainer">
       <ul>
         {props.data.map((work, index) => (
           <List

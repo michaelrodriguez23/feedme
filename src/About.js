@@ -4,7 +4,6 @@ import {
   Bio,
   Container,
   NetworkContainer,
-  FeedContainer,
   Me,
   ChannelsBox,
   FeedsBox,
@@ -54,14 +53,7 @@ export function About({ emailActive }) {
     <Container>
       <Me id="me" src={process.env.PUBLIC_URL + "/assets/img/me.png"} />
 
-      {emailActive ? (
-        <Contact />
-      ) : (
-        <Bio className="michael">
-          <ChannelsBox className="box"></ChannelsBox>
-          <Text className="bio"></Text>
-        </Bio>
-      )}
+      {emailActive ? <Contact /> : null}
 
       <NetworkContainer className="net">
         <Networks links={links} />

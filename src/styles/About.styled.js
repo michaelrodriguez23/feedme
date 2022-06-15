@@ -46,6 +46,7 @@ const FeedsBox = styled.span`
   height: 0.5vw;
   z-index: -2;
 `;
+
 const Hi = styled.span`
   display: inline-block;
 `;

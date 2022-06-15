@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-
-import PulseLoader from "react-spinners/PulseLoader";
 import {
   Send,
   Input,
@@ -11,19 +9,9 @@ import {
   Container,
   ContactContainer,
 } from "./styles/Contact.styled";
-
-import { css } from "@emotion/react";
 import { gsap } from "gsap";
 
 export function Contact() {
-  let [color, setColor] = useState("whitesmoke");
-  let [loading, setLoading] = useState(true);
-
-  const override = css`
-    @media screen and (max-width: 450px) {
-    }
-  `;
-
   useEffect(() => {
     gsap.set(".contactForm", { x: 0, y: 400, scale: 0.7, opacity: 0 });
     gsap.set(".emailIcon", { x: 0, y: -400, scale: 0.3, opacity: 0 });
@@ -44,10 +32,6 @@ export function Contact() {
       opacity: 0.9,
       yoyo: true,
     });
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 200);
   });
 
   return (

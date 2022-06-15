@@ -52,8 +52,6 @@ const Dates = styled.p`
 `;
 
 const DivContainer = styled.div`
-  padding-top: 2em;
-  border: 10px solid red;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -65,6 +63,7 @@ const DivContainer = styled.div`
   overflow-x: scroll;
   overflow-y: scroll;
   z-index: 10;
+
   @media all and (max-width: 500px) {
     padding-left: 0em;
   }
@@ -76,9 +75,9 @@ const PulseLoaderContainer = styled.div`
   position: relative;
   margin: 0 auto;
   margin: auto;
-  padding-bottom: 20em;
 `;
 const Container = styled.div`
+  z-index: 10;
   display: flex;
   height: 100vh;
   width: 100vw;
@@ -93,7 +92,7 @@ const Header = styled.div`
   position: fixed;
   width: 50vh;
   padding-left: 1em;
-  margin-top: 5em;
+  margin-top: 0em;
   @media all and (max-width: 500px) {
     font-size: 2vh;
     width: 5vh;
@@ -104,7 +103,7 @@ const Wrapper = styled.div`
   height: 100vh;
   max-height: 10000px;
   background-color: white;
-  z-index: -1;
+  z-index: 4;
 `;
 
 export {

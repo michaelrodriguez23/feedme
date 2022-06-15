@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import { format } from "date-fns";
-import PulseLoader from "react-spinners/PulseLoader";
 import {
   Wrapper,
   Header,
@@ -12,7 +11,6 @@ import {
   Caption,
   Dates,
   Container,
-  PulseLoaderContainer,
 } from "./styles/Feed.styled";
 
 const Arena = require("are.na");
@@ -25,12 +23,10 @@ function formatDates(feed) {
 function MapFeed(props) {
   return (
     <Wrapper>
-      <h1> hey</h1>
-      <Header>
-        <p> The Weekly Link Digest</p>
-      </Header>
-
       <ul>
+        <Header>
+          <p> The Weekly Link Digest</p>
+        </Header>
         <DivContainer>
           {props.feed
             .slice(0)
@@ -62,8 +58,10 @@ function MapFeed(props) {
 }
 
 const override = css`
+  position: absolute;
+  left: 33%;
+  top: 20%;
   @media screen and (max-width: 450px) {
-    /* left: 30vw; */
   }
 `;
 
@@ -94,21 +92,7 @@ export function HighTechFeed() {
   return (
     <>
       <Container>
-        {/* <PulseLoaderContainer>
-          <PulseLoader
-            color={color}
-            className={loading ? "fade-in" : "fade-out"}
-            loading={loading}
-            css={override}
-            size={60}
-          />
-        </PulseLoaderContainer> */}
-
-        {!loading ? (
-          <MapFeed feed={feed}>
-            <p> hey</p>
-          </MapFeed>
-        ) : null}
+        <MapFeed feed={feed}></MapFeed>
       </Container>
     </>
   );
