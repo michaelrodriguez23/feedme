@@ -6,6 +6,7 @@ const Container = styled.div`
   width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
+  z-index: -5;
 
   @media screen and (max-width: 450px) {
   }

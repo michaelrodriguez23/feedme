@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { EmailButton } from "./EmailButton";
 import { Contact } from "./Contact";
-import { About } from "./About";
 import { Slider } from "./Slider";
 import { WorksFeed } from "./WorksFeed";
 
@@ -18,14 +17,12 @@ export function App() {
   return (
     <div>
       <Router>
-        {/* <Channels /> */}
-        <Slider changeSliderState={(active) => setActive(active)} />
-        {/* {!active ? (
-          <EmailButton
-            changeEmailState={(emailActive) => setEmailActive(emailActive)}
-          />
-        ) : null} */}
-        {active ? <Feeds /> : <About emailActive={emailActive} />}
+        <Slider
+          active={active}
+          changeSliderState={(active) => setActive(active)}
+        />
+
+        {active ? <Feeds /> : null}
 
         {/* <Route path="/Contact" component={Contact} /> */}
 

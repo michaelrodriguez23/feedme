@@ -31,7 +31,6 @@ export function Channels(props) {
   });
 
   function toggleButtonState() {
-    console.log("pressed");
     if (pressed) {
       setPressed(false);
     } else {

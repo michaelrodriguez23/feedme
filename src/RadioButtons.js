@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 import styled from "styled-components";
 import "./styles/RadioButtons.css";
 
 const Wrapper = styled.div`
   display: flex;
+  position: sticky;
   flex-direction: column;
   background: none;
   padding: 0.4em;
-  position: sticky;
-  left: 2%;
-  top: 1%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   gap: 0.3em;
-  z-index: 5;
+  z-index: 10;
   margin-bottom: 3.5em;
 `;
 const ButtonWrapper = styled.div`
@@ -20,17 +22,29 @@ const ButtonWrapper = styled.div`
   top: 0.4em;
   margin: auto;
   flex-direction: column;
-  font-size: 1.3em;
+  font-size: 1.5em;
   flex-wrap: wrap;
-  width: 15em;
+  width: 100%;
   @media screen and (max-width: 450px) {
     left: 1%;
   }
 `;
 
 export default function RadioButtons(props) {
+  useEffect(() => {
+    gsap.set(".wrapper", { opacity: 0 });
+    gsap.to(".wrapper", {
+      delay: 1,
+      y: 0,
+      x: 0,
+      duration: 1,
+      scale: 1,
+      opacity: 1.2,
+    });
+  });
+
   return (
-    <Wrapper>
+    <Wrapper className="wrapper">
       <ButtonWrapper>
         <form>
           <input
@@ -66,6 +80,14 @@ export default function RadioButtons(props) {
             onClick={(active) => props.changeRadioState(3)}
           />
           <label for="radio4"> contact </label>
+          <input
+            type="radio"
+            id="radio5"
+            value="about"
+            name="feedOption"
+            onClick={(active) => props.changeRadioState(4)}
+          />
+          <label for="radio5"> about </label>
         </form>
       </ButtonWrapper>
     </Wrapper>

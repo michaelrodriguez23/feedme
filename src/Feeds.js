@@ -4,6 +4,7 @@ import { HighTechFeed } from "./HighTechFeed";
 import { WorksFeed } from "./WorksFeed";
 import { PhotoFeed } from "./PhotoFeed";
 import { Contact } from "./Contact";
+import { About } from "./About";
 
 function Feeds() {
   const [active, setActive] = React.useState(0);
@@ -16,6 +17,7 @@ function Feeds() {
       {active === 1 ? <HighTechFeed /> : null}
       {active === 2 ? <PhotoFeed /> : null}
       {active === 3 ? <Contact /> : null}
+      {active === 4 ? <About /> : null}
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { data } from "./data.js";
-
 import { gsap } from "gsap";
+
 import {
   BlogLink,
   HyperLink,
@@ -21,12 +21,19 @@ const GithubLink = styled.button``;
 function MapWork(props) {
   let [work, setWork] = useState([data]);
   useEffect(() => {
-    gsap.set(".FeedContainer", { opacity: 0 });
-    gsap.to(".FeedContainer", { duration: 3, opacity: 1 });
+    gsap.set(".WorkContainer", { opacity: 0 });
+    gsap.to(".WorkContainer", {
+      id: "fadeSlideFrom",
+      delay: 1,
+      y: 0,
+      x: 0,
+      duration: 3,
+      scale: 1,
+      opacity: 1.2,
+    });
   });
-
   return (
-    <Container className="FeedContainer">
+    <Container className="WorkContainer">
       <ul>
         {props.data.map((work, index) => (
           <List
