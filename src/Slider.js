@@ -12,7 +12,7 @@ const SliderWrapper = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 10;
+    z-index: 0;
   }
   @media only screen and (max-device-width: 480px) {
     /* styles for mobile browsers smaller than 480px; (iPhone) */
