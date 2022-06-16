@@ -41,7 +41,7 @@ export default function RadioButtons(props) {
       scale: 1,
       opacity: 1.2,
     });
-  });
+  }, []);
 
   return (
     <Wrapper className="wrapper">
