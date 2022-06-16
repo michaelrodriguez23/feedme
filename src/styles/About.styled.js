@@ -16,7 +16,7 @@ const Me = styled.img`
     height: 30%;
   }
   &:hover {
-    filter: opacity(10%);
+    filter: opacity(20%);
   }
 `;
 const NetworkContainer = styled.div`

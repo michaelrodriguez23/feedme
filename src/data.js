@@ -51,11 +51,11 @@ let links = [
     id: 1,
     name: "are.na",
     icon: "✶✶",
-    src: "https://www.are.na/meta-mike",
+    src: "https://www.are.na/socialbug-001",
   },
   {
     id: 3,
-    name: "urbit",
+    name: "~lacfur-nocwet",
     Icon: "",
     src: "",
   },

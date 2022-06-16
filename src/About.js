@@ -19,9 +19,18 @@ import Networks from "./Networks.js";
 export function About({ emailActive }) {
   useEffect(() => {
     // gsap.registerPlugin(TextPlugin, RoughEase);
+    gsap.set(".MePic", { x: -100 });
+    gsap.to(".MePic", {
+      delay: 1,
+      x: 0,
+      y: 0,
+      duration: 3,
+      scale: 1,
+      opacity: 1,
+    });
     gsap.set(".net", { x: -400 });
     gsap.to(".net", {
-      delay: 1,
+      delay: 0,
       x: 0,
       y: 0,
       duration: 1.5,
@@ -29,6 +38,7 @@ export function About({ emailActive }) {
       opacity: 1,
       yoyo: true,
     });
+
     gsap.set(".cursor", { opacity: 1 });
     gsap.to(".cursor", {
       opacity: 0,
@@ -42,7 +52,6 @@ export function About({ emailActive }) {
       onComplete: () => masterTL.play(),
     });
     let masterTL = gsap.timeline({
-      delay: 0.4,
       repeat: -1,
       repeatDelay: -1,
       onComplete: () => masterTL.pause(),
@@ -51,7 +60,11 @@ export function About({ emailActive }) {
 
   return (
     <Container>
-      <Me id="me" src={process.env.PUBLIC_URL + "/assets/img/me.png"} />
+      <Me
+        id="me"
+        className="MePic"
+        src={process.env.PUBLIC_URL + "/assets/img/me.png"}
+      />
 
       {emailActive ? <Contact /> : null}
 
