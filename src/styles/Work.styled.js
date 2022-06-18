@@ -14,20 +14,21 @@ const Container = styled.div`
 
 const Title = styled.p`
   font-size: 2em;
-  font-family: Arial;
+  font-family: monospace;
   display: block;
   margin: auto;
   text-align: center;
   @media screen and (max-width: 450px) {
-    padding-top: 1em;
+    padding-top: 0.2em;
     font-size: 1.2em;
     font-weight: 700;
     width: 80vw;
   }
 `;
 const Caption = styled.p`
-  font-size: 1em;
-  width: 50vw;
+  font-size: 1.5em;
+  width: 100vw;
+  padding: 1em;
   font-family: monospace;
   display: block;
   margin: auto;
@@ -35,17 +36,17 @@ const Caption = styled.p`
 
   @media screen and (max-width: 450px) {
     font-size: 1.5vh;
-    width: 60vw;
-    height: 20vw;
+    width: 100vw;
+    padding: 1em;
   }
 `;
 const CoverImage = styled.img`
   object-fit: contain;
-  width: 50vw;
+  width: 40vw;
 
   flex-grow: auto;
   @media screen and (max-width: 450px) {
-    width: 50vw;
+    width: 40vw;
   }
 `;
 const SubImage1 = styled.img`
@@ -68,16 +69,13 @@ const LinkContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 1em;
-  padding-top: 1em;
 `;
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1em;
-  padding-top: 1em;
 `;
 const List = styled.li`
-  padding-top: 5em;
   display: flex;
   flex-direction: column;
   height: 100vh;

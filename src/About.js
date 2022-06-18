@@ -19,13 +19,12 @@ import Networks from "./Networks.js";
 export function About({ emailActive }) {
   useEffect(() => {
     // gsap.registerPlugin(TextPlugin, RoughEase);
-    gsap.set(".MePic", { x: -100 });
+    gsap.set(".MePic", { x: -20 });
     gsap.to(".MePic", {
       delay: 1,
-      x: 0,
+      x: 40,
       y: 0,
-      duration: 3,
-      scale: 1,
+      duration: 1,
       opacity: 1,
     });
     gsap.set(".net", { x: -400 });
