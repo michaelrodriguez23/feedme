@@ -8,8 +8,8 @@ const Wrapper = styled.div`
   position: sticky;
   flex-direction: column;
   background: none;
-  padding: 0.4em;
   width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -18,15 +18,14 @@ const Wrapper = styled.div`
   margin-bottom: 3.5em;
 `;
 const ButtonWrapper = styled.div`
-  position: absolute;
-  top: 0.4em;
   margin: auto;
   flex-direction: column;
-  font-size: 1.5em;
+  font-size: 2em;
+  height: 2em;
   flex-wrap: wrap;
   width: 100%;
+
   @media screen and (max-width: 450px) {
-    left: 1%;
   }
 `;
 
@@ -49,19 +48,29 @@ export default function RadioButtons(props) {
         <form>
           <input
             type="radio"
-            value="Works"
-            id="radio1"
+            id="radio5"
+            value="about"
             name="feedOption"
             defaultChecked
             onClick={(active) => props.changeRadioState(0)}
           />
+          <label for="radio5"> about </label>
+
+          <input
+            type="radio"
+            value="Works"
+            id="radio1"
+            name="feedOption"
+            onClick={(active) => props.changeRadioState(1)}
+          />
           <label for="radio1"> works </label>
+
           <input
             type="radio"
             id="radio2"
             value="Reads"
             name="feedOption"
-            onClick={(active) => props.changeRadioState(1)}
+            onClick={(active) => props.changeRadioState(2)}
           />
           <label for="radio2"> reads </label>
           <input
@@ -69,7 +78,7 @@ export default function RadioButtons(props) {
             id="radio3"
             value="Photos"
             name="feedOption"
-            onClick={(active) => props.changeRadioState(2)}
+            onClick={(active) => props.changeRadioState(3)}
           />
           <label for="radio3"> photos </label>
           <input
@@ -77,17 +86,9 @@ export default function RadioButtons(props) {
             id="radio4"
             value="email"
             name="feedOption"
-            onClick={(active) => props.changeRadioState(3)}
-          />
-          <label for="radio4"> contact </label>
-          <input
-            type="radio"
-            id="radio5"
-            value="about"
-            name="feedOption"
             onClick={(active) => props.changeRadioState(4)}
           />
-          <label for="radio5"> about </label>
+          <label for="radio4"> contact </label>
         </form>
       </ButtonWrapper>
     </Wrapper>

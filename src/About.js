@@ -30,7 +30,7 @@ export function About({ emailActive }) {
     });
     gsap.set(".net", { x: -400 });
     gsap.to(".net", {
-      delay: 0,
+      delay: 0.2,
       x: 0,
       y: 0,
       duration: 1.5,

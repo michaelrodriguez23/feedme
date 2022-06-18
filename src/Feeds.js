@@ -12,12 +12,11 @@ function Feeds() {
   return (
     <div>
       <RadioButtons changeRadioState={(active) => setActive(active)} />
-
-      {active === 0 ? <WorksFeed /> : null}
-      {active === 1 ? <HighTechFeed /> : null}
-      {active === 2 ? <PhotoFeed /> : null}
-      {active === 3 ? <Contact /> : null}
-      {active === 4 ? <About /> : null}
+      {active === 0 ? <About /> : null}
+      {active === 1 ? <WorksFeed /> : null}
+      {active === 2 ? <HighTechFeed /> : null}
+      {active === 3 ? <PhotoFeed /> : null}
+      {active === 4 ? <Contact /> : null}
     </div>
   );
 }

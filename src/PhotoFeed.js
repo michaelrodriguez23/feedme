@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide, EffectCreative } from "swiper/react";
 import { gsap } from "gsap";
-import "swiper/swiper.min.css";
+
 import "./styles/swiper.css";
 import "swiper/swiper-bundle.min.css";
 
@@ -15,12 +15,12 @@ const arena = new Arena({
 });
 
 const DivContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 `;
 
 const Image = styled.img`
-  width: 70%;
+  width: 100%;
 `;
 
 export function PhotoFeed() {
@@ -57,7 +57,7 @@ export function PhotoFeed() {
         delay: 0.5,
         y: 0,
         x: 0,
-        duration: 1.4,
+        duration: 0.7,
         scale: 1,
         opacity: 1.2,
       });
