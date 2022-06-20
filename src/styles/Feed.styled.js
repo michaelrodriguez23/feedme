@@ -20,7 +20,10 @@ const Photo = styled.img`
 const List = styled.li`
   text-decoration: none;
   display: block;
-  padding: 2em;
+`;
+const DetailWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 const Caption = styled.p`
   font-size: 0.9em;
@@ -56,8 +59,8 @@ const DivContainer = styled.div`
   width: 100vw;
   height: 100vh;
   flex-wrap: wrap;
+  align-content: right;
   max-height: 10000px;
-  padding-left: 10em;
   flex-direction: row;
   justify-content: space-between;
   overflow-x: scroll;
@@ -69,7 +72,13 @@ const DivContainer = styled.div`
   }
 `;
 const ListWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
   width: 100vw;
+  padding: 1em;
+  gap: 5em;
+  justify-content: right;
+  margin-right: 20em;
 `;
 const PulseLoaderContainer = styled.div`
   position: relative;
@@ -78,6 +87,7 @@ const PulseLoaderContainer = styled.div`
 `;
 const Container = styled.div`
   z-index: 10;
+  margin-top: 1em;
   display: flex;
   height: 100vh;
   width: 100vw;
@@ -92,7 +102,7 @@ const Header = styled.div`
   position: fixed;
   width: 50vh;
   padding-left: 1em;
-  margin-top: 0em;
+  margin-top: 1em;
   @media all and (max-width: 500px) {
     font-size: 2vh;
     width: 5vh;
@@ -111,6 +121,7 @@ export {
   Header,
   DivContainer,
   ListWrapper,
+  DetailWrapper,
   List,
   Photo,
   Caption,

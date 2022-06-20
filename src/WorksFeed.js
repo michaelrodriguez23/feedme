@@ -36,35 +36,15 @@ function MapWork(props) {
     <Container className="WorkContainer">
       <ul>
         {props.data.map((work, index) => (
-          <List
-            key={work.id}
-            style={{ backgroundColor: index % 2 === 1 ? "black" : "white" }}
-          >
-            {" "}
+          <List key={work.id}>
             <ImageContainer>
               <CoverImage src={process.env.PUBLIC_URL + work.images.cover} />
-              {/* {work.images.first ? (
-                <SubImage1 src={process.env.PUBLIC_URL + work.images.first} />
-              ) : null}
-              {work.images.first ? (
-                <SubImage2 src={process.env.PUBLIC_URL + work.images.second} />
-              ) : null} */}
             </ImageContainer>
-            <HeaderContainer
-              style={{ color: index % 2 === 1 ? "white" : "black" }}
-            >
+
+            <HeaderContainer>
               <Title> {work.title} </Title>
               <Caption> {work.description} </Caption>
             </HeaderContainer>
-            <LinkContainer>
-              <HyperLink style={{ color: index % 2 === 1 ? "white" : "black" }}>
-                Demo{" "}
-              </HyperLink>
-              <BlogLink style={{ color: index % 2 === 1 ? "white" : "black" }}>
-                {" "}
-                Repo
-              </BlogLink>
-            </LinkContainer>
           </List>
         ))}
       </ul>

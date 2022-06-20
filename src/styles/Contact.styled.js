@@ -26,21 +26,22 @@ const PulseLoaderContainer = styled.div`
 `;
 
 const Form = styled.form`
-  padding-top: 10em;
-  width: 100vw;
-  height: 100vh;
+  width: 50vw;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  margin: 0;
+  margin-bottom: 10em;
+  border: 1px solid silver;
+  border-radius: 1em;
 `;
 
 const Input = styled.input`
   height: 3vh;
-  width: 40vw;
+  width: 20vw;
   margin: 0;
-  font-size: 2vw;
+  font-size: 1vw;
   border-radius: 0.2em;
   text-align: center;
 
@@ -54,8 +55,8 @@ const Send = styled.input`
 `;
 const Text = styled.textarea`
   height: 20vh;
-  width: 40vw;
-  font-size: 2vw;
+  width: 20vw;
+  font-size: 1vw;
   border-radius: 0.2em;
   text-align: center;
 

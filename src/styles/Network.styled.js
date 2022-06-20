@@ -28,7 +28,7 @@ const List = styled.li`
 `;
 
 const Header = styled.li`
-  font-size: 2em;
+  font-size: 3em;
   font-style: bold;
   padding-bottom: 0.2em;
 

@@ -38,6 +38,44 @@ let data = [
       github: "github link",
     },
   },
+  {
+    id: 2,
+    title: "Jason Fox",
+    description:
+      "Portfolio website built with vanilla JS, with a headless CMS Strapi.",
+    year: "2022",
+    tags: ["Web", "Portfolio", "CMS", "Strapi"],
+    client: "Jason Fox",
+    images: {
+      cover: "./assets/img/work/jason.gif",
+      first: "",
+      second: "",
+    },
+    links: {
+      filter: "filter link",
+      documentation: "doc link",
+      github: "github link",
+    },
+  },
+  {
+    id: 2,
+    title: "Jason Fox",
+    description:
+      "Portfolio website built with vanilla JS, with a headless CMS Strapi.",
+    year: "2022",
+    tags: ["Web", "Portfolio", "CMS", "Strapi"],
+    client: "Jason Fox",
+    images: {
+      cover: "./assets/img/work/jason.gif",
+      first: "",
+      second: "",
+    },
+    links: {
+      filter: "filter link",
+      documentation: "doc link",
+      github: "github link",
+    },
+  },
 ];
 
 let links = [

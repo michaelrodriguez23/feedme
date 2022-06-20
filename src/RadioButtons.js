@@ -15,7 +15,6 @@ const Wrapper = styled.div`
   text-align: center;
   gap: 0.3em;
   z-index: 10;
-  margin-bottom: 3.5em;
 `;
 const ButtonWrapper = styled.div`
   margin: auto;

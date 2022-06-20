@@ -8,19 +8,40 @@ import { WorksFeed } from "./WorksFeed";
 
 import { Feeds } from "./Feeds";
 import { Channels } from "./Channels";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
+function useWindowSize() {
+  const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSize([window.innerHeight, window.innerWidth]);
+    };
+    window.addEventListener("resize", handleResize);
+  }, []);
+  return size;
+}
 
 export function App() {
   const [active, setActive] = useState(false);
   const [emailActive, setEmailActive] = useState(false);
+  const [height, width] = useWindowSize();
+
+  useEffect(() => {
+    if (width > 600) {
+      setActive(true);
+    }
+  });
 
   return (
     <div>
       <Router>
-        <Slider
-          active={active}
-          changeSliderState={(active) => setActive(active)}
-        />
+        {!active ? (
+          <Slider
+            active={active}
+            changeSliderState={(active) => setActive(active)}
+          />
+        ) : null}
 
         {active ? <Feeds /> : null}
 

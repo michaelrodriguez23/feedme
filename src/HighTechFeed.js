@@ -6,6 +6,7 @@ import {
   Header,
   DivContainer,
   ListWrapper,
+  DetailWrapper,
   List,
   Photo,
   Caption,
@@ -44,10 +45,12 @@ function MapFeed(props) {
                       rel="noopener noreferrer"
                     >
                       <Photo src={feed.image ? feed.image.display.url : null} />
-                      <Caption> {feed.title} </Caption>
-                      <Dates>{d.toString()}</Dates>{" "}
                     </a>
                   </List>
+                  <DetailWrapper>
+                    <Caption> {feed.title} </Caption>
+                    <Dates>{d.toString()}</Dates>{" "}
+                  </DetailWrapper>
                 </ListWrapper>
               );
             })}

@@ -44,8 +44,8 @@ body {
   .swiper-slide img {
     display: flex;
     margin: auto;
-    width: 35%;
-    margin: 3em;
+    width: 30%;
+    margin-top: 1.5em;
     justify-content: center;
     align-items: center;
     flex-basis:auto;
@@ -63,7 +63,7 @@ body {
       justify-content: center;
       align-items: center;
       flex-basis:auto;
-      overflow: hidden;
+
     }
 }
 

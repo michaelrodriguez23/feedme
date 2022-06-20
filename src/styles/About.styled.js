@@ -61,7 +61,6 @@ const Bio = styled.div`
   position: relative;
   font-size: 6vw;
   overflow: hidden;
-  padding-bottom: 35vh;
   z-index: 2;
 `;
 const FeedContainer = styled.div`

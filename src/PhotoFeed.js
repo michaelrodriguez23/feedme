@@ -15,7 +15,7 @@ const arena = new Arena({
 });
 
 const DivContainer = styled.div`
-  height: 100%;
+  height: 90vh;
   width: 100vw;
 `;
 

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  margin: auto;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -13,57 +12,51 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 2em;
-  font-family: monospace;
+  font-size: 0.9em;
+  font-family: sans-serif;
   display: block;
   margin: auto;
   text-align: center;
+  width: 20vw;
+
   @media screen and (max-width: 450px) {
-    padding-top: 0.2em;
-    font-size: 1.2em;
+    font-size: 0.9em;
     font-weight: 700;
-    width: 80vw;
+    width: 20vw;
   }
 `;
 const Caption = styled.p`
-  font-size: 1.5em;
-  width: 100vw;
-  padding: 1em;
-  font-family: monospace;
-  display: block;
+  font-size: 0.9em;
+  width: 40vw;
+  font-family: sans-serif;
+
   margin: auto;
   text-align: center;
 
   @media screen and (max-width: 450px) {
-    font-size: 1.5vh;
-    width: 100vw;
-    padding: 1em;
+    font-size: 1.2vh;
+    width: 20vw;
   }
 `;
 const CoverImage = styled.img`
   object-fit: contain;
-  width: 40vw;
+  height: 23vw;
+  width: 23vw;
+  padding: 1em;
+  border: 0.1em double silver;
+  border-radius: 1em;
 
-  flex-grow: auto;
   @media screen and (max-width: 450px) {
+    height: 40vw;
     width: 40vw;
   }
 `;
-const SubImage1 = styled.img`
-  object-fit: contain;
-  width: 40vw;
-  flex-grow: auto;
-`;
-const SubImage2 = styled.img`
-  object-fit: contain;
-  width: 30vw;
-  flex-grow: auto;
-`;
+
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 100vh;
+  margin-bottom: 1em;
 `;
 const LinkContainer = styled.div`
   display: flex;
@@ -72,16 +65,16 @@ const LinkContainer = styled.div`
 `;
 const HeaderContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 1em;
+  flex-direction: row;
+  gap: 0.2em;
 `;
 const List = styled.li`
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-
+  flex-direction: row;
+  height: 40vh;
+  padding: 2em;
+  margin-bottom: 2em;
   @media screen and (max-width: 450px) {
-    height: 40vh;
   }
 `;
 const HyperLink = styled.button`
@@ -90,6 +83,7 @@ const HyperLink = styled.button`
   height: 2.6em;
   width: 3.6em;
   font-weight: bold;
+
   &:hover {
     cursor: pointer;
 
@@ -115,8 +109,6 @@ export {
   HeaderContainer,
   ImageContainer,
   LinkContainer,
-  SubImage1,
-  SubImage2,
   CoverImage,
   Caption,
   Title,
