@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import { format } from "date-fns";
+import { gsap } from "gsap";
 import {
   Wrapper,
   Header,
@@ -86,11 +87,21 @@ export function HighTechFeed() {
       .contents({ per: 200 })
       .then((contents) => setFeed(contents))
       .catch((err) => console.log(err));
+    gsap.set(".HighTechContainer", { opacity: 0 });
+    gsap.to(".HighTechContainer", {
+      id: "fadeSlideFrom",
+      delay: 0.3,
+      y: 0,
+      x: 0,
+      duration: 1,
+      scale: 1,
+      opacity: 1.2,
+    });
   }, []);
 
   return (
     <>
-      <Container>
+      <Container className="HighTechContainer">
         <MapFeed feed={feed}></MapFeed>
       </Container>
     </>

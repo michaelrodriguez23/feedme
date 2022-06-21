@@ -16,20 +16,21 @@ export function Contact() {
     gsap.set(".contactForm", { x: 0, y: 400, scale: 0.7, opacity: 0 });
     gsap.set(".emailIcon", { x: 0, y: -400, scale: 0.3, opacity: 0 });
     gsap.to(".emailIcon", {
+      id: "fadeSlideFrom",
       delay: 0.4,
       y: 0,
       duration: 1,
       scale: 1,
-      opacity: 1.2,
-      yoyo: true,
+      opacity: 1,
     });
 
     gsap.to(".contactForm", {
+      id: "fadeSlideFrom",
       delay: 0.5,
       y: 0,
-      duration: 0.8,
+      duration: 1,
       scale: 1,
-      opacity: 0.9,
+      opacity: 1,
       yoyo: true,
     });
   });

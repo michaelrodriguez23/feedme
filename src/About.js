@@ -22,7 +22,7 @@ export function About({ emailActive }) {
     gsap.set(".MePic", { x: -20 });
     gsap.to(".MePic", {
       delay: 1,
-      x: 40,
+      x: 10,
       y: 0,
       duration: 1,
       opacity: 1,
@@ -36,6 +36,16 @@ export function About({ emailActive }) {
       scale: 1,
       opacity: 1,
       yoyo: true,
+    });
+    gsap.set(".AboutContainer", { opacity: 0 });
+    gsap.to(".AboutContainer", {
+      id: "fadeSlideFrom",
+      delay: 0.3,
+      y: 0,
+      x: 0,
+      duration: 1,
+      scale: 1,
+      opacity: 1.2,
     });
 
     gsap.set(".cursor", { opacity: 1 });
@@ -58,7 +68,7 @@ export function About({ emailActive }) {
   });
 
   return (
-    <Container>
+    <Container className="AboutContainer">
       <Me
         id="me"
         className="MePic"

@@ -3,7 +3,7 @@ let data = [
     id: 1,
     title: "Hydroponic System AR",
     description:
-      "Various hydroponic systems and their use cases through immersive design. The models were created using Blender, and UI developed in Spark AR with node patching, and Javascript.",
+      "Developed 3 augmented reality apps showcasing hydroponic systems and their use cases. The models were created using Blender, and UI developed in Spark AR with node patching, and Javascript.",
     year: "2022",
     tags: ["AR", "SparkAR", "JS", "Blender"],
     client: "The Urban Wild",
@@ -21,7 +21,7 @@ let data = [
 
   {
     id: 2,
-    title: "Jason Fox",
+    title: "Jason Fox Portfolio Site",
     description:
       "Portfolio website built with vanilla JS, with a headless CMS Strapi.",
     year: "2022",
@@ -40,9 +40,9 @@ let data = [
   },
   {
     id: 3,
-    title: "What is news",
+    title: "What is News? ",
     description:
-      "A react web app to compare the most sent articles between facebook , and email. ",
+      "A web app to compare the most sent articles between facebook , and email built with react + p5js ",
     year: "2022",
     tags: ["Web", "Portfolio", "CMS", "Strapi"],
     client: "Jason Fox",
@@ -59,14 +59,13 @@ let data = [
   },
   {
     id: 2,
-    title: "Jason Fox",
-    description:
-      "Portfolio website built with vanilla JS, with a headless CMS Strapi.",
+    title: "'Space Wars' Onyx Collective + Sporting Life",
+    description: "Shot & Edited Music Video on 16mm film ",
     year: "2022",
-    tags: ["Web", "Portfolio", "CMS", "Strapi"],
-    client: "Jason Fox",
+    tags: ["onyx"],
+    client: "ONYX Collective",
     images: {
-      cover: "./assets/img/work/jason.gif",
+      cover: "./assets/img/work/onyx_demo.gif",
       first: "",
       second: "",
     },

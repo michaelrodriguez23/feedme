@@ -24,10 +24,10 @@ function MapWork(props) {
     gsap.set(".WorkContainer", { opacity: 0 });
     gsap.to(".WorkContainer", {
       id: "fadeSlideFrom",
-      delay: 1,
+      delay: 0.3,
       y: 0,
       x: 0,
-      duration: 3,
+      duration: 1,
       scale: 1,
       opacity: 1.2,
     });

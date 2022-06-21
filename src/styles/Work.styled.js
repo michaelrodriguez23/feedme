@@ -12,12 +12,13 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 1.2em;
-  font-family: sans-serif;
+  font-size: 1.1em;
+  font-family: monospace;
+  font-weight: 900;
   display: block;
   margin: auto;
   text-align: center;
-  width: 20vw;
+  width: 30vw;
 
   @media screen and (max-width: 450px) {
     font-size: 0.9em;
@@ -26,14 +27,16 @@ const Title = styled.p`
   }
 `;
 const Caption = styled.p`
-  font-size: 1em;
-  width: 45vw;
-  font-family: sans-serif;
+  font-size: 0.9em;
+  word-wrap: break-word;
+  white-space: 1em;
+  width: 30vw;
+  font-family: monospace;
   margin: auto;
   text-align: center;
 
   @media screen and (max-width: 450px) {
-    font-size: 1.3vh;
+    font-size: 1.2vh;
     width: 55vw;
   }
 `;
@@ -47,7 +50,7 @@ const CoverImage = styled.img`
 
   @media screen and (max-width: 450px) {
     height: 60vw;
-    width: 60vw;
+    width: 40vw;
   }
 `;
 
