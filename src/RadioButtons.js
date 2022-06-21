@@ -17,7 +17,6 @@ const Wrapper = styled.div`
   z-index: 10;
 `;
 const ButtonWrapper = styled.div`
-  margin: auto;
   flex-direction: column;
   font-size: 2em;
   height: 2em;

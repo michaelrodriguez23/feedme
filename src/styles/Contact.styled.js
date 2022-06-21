@@ -35,6 +35,10 @@ const Form = styled.form`
   margin-bottom: 10em;
   border: 1px solid silver;
   border-radius: 1em;
+  padding-bottom: 2em;
+  @media screen and (max-width: 450px) {
+    width: 80vw;
+  }
 `;
 
 const Input = styled.input`
@@ -46,7 +50,7 @@ const Input = styled.input`
   text-align: center;
 
   @media screen and (max-width: 450px) {
-    font-size: 6vw;
+    font-size: 4vw;
     width: 60vw;
   }
 `;

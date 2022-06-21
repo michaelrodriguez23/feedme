@@ -7,7 +7,7 @@ const Photo = styled.img`
 
   filter: drop-shadow(0vh 0vh 2vh lightsteelblue);
 
-  @media all and (max-width: 500px) {
+  @media all and (max-width: 450px) {
     width: 40vw;
     height: 40vw;
     border: 0.2em solid white;
@@ -26,10 +26,10 @@ const DetailWrapper = styled.div`
   flex-direction: column;
 `;
 const Caption = styled.p`
-  font-size: 0.9em;
-  width: 15em;
+  font-size: 1em;
+  width: 20em;
   color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
   display: block;
   margin: auto;
   text-align: center;
@@ -49,7 +49,7 @@ const Dates = styled.p`
   text-align: center;
   text-decoration: none;
   padding-top: 1em;
-  @media all and (max-width: 500px) {
+  @media all and (max-width: 450px) {
     font-size: 1em;
   }
 `;
@@ -67,8 +67,8 @@ const DivContainer = styled.div`
   overflow-y: scroll;
   z-index: 10;
   margin-top: 0;
+  gap: 3em;
   @media all and (max-width: 500px) {
-    padding-left: 0em;
   }
 `;
 const ListWrapper = styled.div`
@@ -76,15 +76,18 @@ const ListWrapper = styled.div`
   flex-direction: row;
   width: 100vw;
   padding: 1em;
-  gap: 5em;
+  gap: 10em;
   justify-content: right;
-  margin-right: 20em;
+  margin-right: 15em;
+  @media all and (max-width: 500px) {
+    flex-direction: column;
+    margin-right: 0;
+    padding: 1em;
+    width: 100vw;
+    gap: 2em;
+  }
 `;
-const PulseLoaderContainer = styled.div`
-  position: relative;
-  margin: 0 auto;
-  margin: auto;
-`;
+
 const Container = styled.div`
   z-index: 10;
   display: flex;
@@ -103,8 +106,10 @@ const Header = styled.div`
   width: 50vh;
   padding-left: 1em;
   @media all and (max-width: 500px) {
-    font-size: 2vh;
-    width: 5vh;
+    font-size: 1.2vh;
+    width: 100vw;
+    z-index: 10;
+    margin-top: -1.3em;
   }
 `;
 const Wrapper = styled.div`
@@ -126,5 +131,4 @@ export {
   Caption,
   Dates,
   Container,
-  PulseLoaderContainer,
 };

@@ -29,13 +29,12 @@ const Caption = styled.p`
   font-size: 1em;
   width: 45vw;
   font-family: sans-serif;
-
   margin: auto;
   text-align: center;
 
   @media screen and (max-width: 450px) {
     font-size: 1.2vh;
-    width: 20vw;
+    width: 55vw;
   }
 `;
 const CoverImage = styled.img`
@@ -47,8 +46,8 @@ const CoverImage = styled.img`
   border-radius: 1em;
 
   @media screen and (max-width: 450px) {
-    height: 40vw;
-    width: 40vw;
+    height: 60vw;
+    width: 60vw;
   }
 `;
 
@@ -75,6 +74,7 @@ const List = styled.li`
   padding: 2em;
   margin-bottom: 2em;
   @media screen and (max-width: 450px) {
+    flex-direction: column;
   }
 `;
 const HyperLink = styled.button`

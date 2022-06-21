@@ -69,13 +69,13 @@ body {
 
 .swiper-button-prev {
   background-image:url('/assets/icons/arrow-left.png');
-  margin-left: 10em;
+  margin-left: 12em;
 
 }
 
 .swiper-button-next {
   background-image:url('/assets/icons/arrow-right.png');
-  margin-right: 10em;
+  margin-right: 12em;
 
 
 }
@@ -85,10 +85,18 @@ body {
 background-repeat: no-repeat;
 background-size: contain;
 background-position: center;
-scale: 1.5;
-
+filter:opacity(.069);
+scale: 3;
+}
+@media screen and (max-width: 500px) {
+  .swiper-button-next, 
+.swiper-button-prev {
+  filter:opacity(0);
+  z-index: -20;
 
 }
+}
+
 .swiper-button-next::after, 
 .swiper-button-prev::after{
   display: none;
