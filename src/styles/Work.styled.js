@@ -33,7 +33,7 @@ const Caption = styled.p`
   text-align: center;
 
   @media screen and (max-width: 450px) {
-    font-size: 1.2vh;
+    font-size: 1.3vh;
     width: 55vw;
   }
 `;
