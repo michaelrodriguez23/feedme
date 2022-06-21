@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Swiper, SwiperSlide, EffectCreative } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation } from "swiper";
+
 import { gsap } from "gsap";
 
 import "./styles/swiper.css";
@@ -62,9 +64,15 @@ export function PhotoFeed() {
         opacity: 1.2,
       });
     });
+    SwiperCore.use([Navigation]);
     return (
       <DivContainer className="PhotoContainer">
         <Swiper
+          modules={[Navigation]}
+          navigation
+          effect
+          speed={400}
+          loop
           className="mySwiper"
           grabCursor={true}
           pagination={{ clickable: true }}

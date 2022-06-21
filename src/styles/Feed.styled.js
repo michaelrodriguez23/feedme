@@ -66,6 +66,7 @@ const DivContainer = styled.div`
   overflow-x: scroll;
   overflow-y: scroll;
   z-index: 10;
+  margin-top: 0;
 
   @media all and (max-width: 500px) {
     padding-left: 0em;
@@ -87,12 +88,12 @@ const PulseLoaderContainer = styled.div`
 `;
 const Container = styled.div`
   z-index: 10;
-  margin-top: 1em;
   display: flex;
   height: 100vh;
   width: 100vw;
   align-items: center;
   justify-content: center;
+  margin-top: 0;
 `;
 const Header = styled.div`
   color: lightsteelblue;
@@ -102,7 +103,6 @@ const Header = styled.div`
   position: fixed;
   width: 50vh;
   padding-left: 1em;
-  margin-top: 1em;
   @media all and (max-width: 500px) {
     font-size: 2vh;
     width: 5vh;

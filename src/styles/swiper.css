@@ -45,7 +45,7 @@ body {
     display: flex;
     margin: auto;
     width: 30%;
-    margin-top: 1.5em;
+    margin-top: 3em;
     justify-content: center;
     align-items: center;
     flex-basis:auto;
@@ -67,5 +67,30 @@ body {
     }
 }
 
+.swiper-button-prev {
+  background-image:url('/assets/icons/arrow-left.png');
+  margin-left: 10em;
 
+}
+
+.swiper-button-next {
+  background-image:url('/assets/icons/arrow-right.png');
+  margin-right: 10em;
+
+
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+scale: 1.5;
+
+
+}
+.swiper-button-next::after, 
+.swiper-button-prev::after{
+  display: none;
+}
 

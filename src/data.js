@@ -8,7 +8,7 @@ let data = [
     tags: ["AR", "SparkAR", "JS", "Blender"],
     client: "The Urban Wild",
     images: {
-      cover: "/assets/img/work/Aquaponic.png",
+      cover: "/assets/img/work/growtower.gif",
       first: "./assets/img/work/Grow-Tower.png",
       second: "./assets/img/work/NFT.png",
     },
@@ -39,15 +39,15 @@ let data = [
     },
   },
   {
-    id: 2,
-    title: "Jason Fox",
+    id: 3,
+    title: "What is news",
     description:
-      "Portfolio website built with vanilla JS, with a headless CMS Strapi.",
+      "A react web app to compare the most sent articles between facebook , and email. ",
     year: "2022",
     tags: ["Web", "Portfolio", "CMS", "Strapi"],
     client: "Jason Fox",
     images: {
-      cover: "./assets/img/work/jason.gif",
+      cover: "./assets/img/work/whatis.gif",
       first: "",
       second: "",
     },

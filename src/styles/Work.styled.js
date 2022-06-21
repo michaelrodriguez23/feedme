@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 0.9em;
+  font-size: 1.2em;
   font-family: sans-serif;
   display: block;
   margin: auto;
@@ -26,8 +26,8 @@ const Title = styled.p`
   }
 `;
 const Caption = styled.p`
-  font-size: 0.9em;
-  width: 40vw;
+  font-size: 1em;
+  width: 45vw;
   font-family: sans-serif;
 
   margin: auto;
