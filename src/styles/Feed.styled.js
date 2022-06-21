@@ -67,7 +67,6 @@ const DivContainer = styled.div`
   overflow-y: scroll;
   z-index: 10;
   margin-top: 0;
-
   @media all and (max-width: 500px) {
     padding-left: 0em;
   }

@@ -86,10 +86,6 @@ export function HighTechFeed() {
       .contents({ per: 200 })
       .then((contents) => setFeed(contents))
       .catch((err) => console.log(err));
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
   }, []);
 
   return (
