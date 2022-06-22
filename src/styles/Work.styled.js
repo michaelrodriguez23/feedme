@@ -23,7 +23,7 @@ const Title = styled.p`
   @media screen and (max-width: 450px) {
     font-size: 0.9em;
     font-weight: 700;
-    width: 20vw;
+    width: 30vw;
   }
 `;
 const Caption = styled.p`
@@ -37,7 +37,8 @@ const Caption = styled.p`
 
   @media screen and (max-width: 450px) {
     font-size: 1.2vh;
-    width: 55vw;
+    width: 50vw;
+    text-align: center;
   }
 `;
 const CoverImage = styled.img`
@@ -49,7 +50,7 @@ const CoverImage = styled.img`
   border-radius: 1em;
 
   @media screen and (max-width: 450px) {
-    height: 60vw;
+    height: 40vw;
     width: 40vw;
   }
 `;

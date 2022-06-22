@@ -13,7 +13,7 @@ const Me = styled.img`
   height: 50%;
   transition: ease-out 0.4s;
   @media all and (max-width: 500px) {
-    height: 30%;
+    height: 35%;
   }
   &:hover {
     filter: opacity(20%);
