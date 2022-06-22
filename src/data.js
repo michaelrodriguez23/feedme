@@ -13,7 +13,8 @@ let data = [
       second: "./assets/img/work/NFT.png",
     },
     links: {
-      filter: "filter link",
+      project:
+        "https://www.instagram.com/ar/765229211152517/?ch=NzAyYTBmOTA2MWMyZGU2NzEwMTViYzdmMTQxMjg0YzI%3D",
       documentation: "doc link",
       github: "github link",
     },
@@ -33,7 +34,7 @@ let data = [
       second: "",
     },
     links: {
-      filter: "filter link",
+      project: "https://michaelrodriguez23.github.io/jasonFox/",
       documentation: "doc link",
       github: "github link",
     },
@@ -52,7 +53,7 @@ let data = [
       second: "",
     },
     links: {
-      filter: "filter link",
+      project: "https://github.com/michaelrodriguez23/WhatIsNews",
       documentation: "doc link",
       github: "github link",
     },
@@ -70,7 +71,7 @@ let data = [
       second: "",
     },
     links: {
-      filter: "https://www.youtube.com/watch?v=JCc8ON00J5c",
+      project: "https://www.youtube.com/watch?v=JCc8ON00J5c",
       documentation: "doc link",
       github: "github link",
     },

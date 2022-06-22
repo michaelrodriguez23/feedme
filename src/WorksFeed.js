@@ -37,9 +37,15 @@ function MapWork(props) {
       <ul>
         {props.data.map((work, index) => (
           <List key={work.id}>
-            <ImageContainer>
-              <CoverImage src={process.env.PUBLIC_URL + work.images.cover} />
-            </ImageContainer>
+            <a
+              href={work.links.project}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ImageContainer>
+                <CoverImage src={process.env.PUBLIC_URL + work.images.cover} />
+              </ImageContainer>
+            </a>
 
             <HeaderContainer>
               <Title> {work.title} </Title>
