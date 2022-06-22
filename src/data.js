@@ -3,7 +3,7 @@ let data = [
     id: 1,
     title: "Hydroponic System AR",
     description:
-      "Developed 3 augmented reality apps showcasing hydroponic systems and their use cases. The models were created using Blender, and UI developed in Spark AR with node patching, and Javascript.",
+      "3 augmented reality apps showcasing hydroponic systems. Created in Blender, and Spark AR node patching, and Javascript.",
     year: "2022",
     tags: ["AR", "SparkAR", "JS", "Blender"],
     client: "The Urban Wild",

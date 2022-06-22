@@ -4,16 +4,16 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: white;
-  height: 100vh;
+  height: 90vh;
 `;
 const Me = styled.img`
   position: absolute;
-  bottom: 0%;
-  right: 1%;
+  bottom: 0;
+  right: 0%;
   height: 50%;
   transition: ease-out 0.4s;
   @media all and (max-width: 500px) {
-    height: 35%;
+    height: 40%;
   }
   &:hover {
     filter: opacity(20%);
@@ -23,37 +23,14 @@ const NetworkContainer = styled.div`
   position: absolute;
   bottom: 10%;
   left: 10%;
+
   @media all and (max-width: 500px) {
+    width: 12em;
     bottom: 15%;
     left: 2%;
   }
 `;
 
-const ChannelsBox = styled.span`
-  position: absolute;
-  bottom: 0;
-  display: inline-block;
-  background: coral;
-  height: 0.5vw;
-  z-index: -2;
-`;
-const FeedsBox = styled.span`
-  position: absolute;
-  left: 5em;
-  bottom: 0;
-  display: inline-block;
-  background: coral;
-  height: 0.5vw;
-  z-index: -2;
-`;
-
-const Hi = styled.span`
-  display: inline-block;
-`;
-const Text = styled.span`
-  z-index: -1;
-  display: inline-block;
-`;
 const Cursor = styled.span``;
 
 const Bio = styled.div`
@@ -63,27 +40,5 @@ const Bio = styled.div`
   overflow: hidden;
   z-index: 2;
 `;
-const FeedContainer = styled.div`
-  font-family: monospace;
-  text-align: center;
-  margin: auto;
-  border: 2px solid black;
-  border-radius: 1em;
-  padding: 1em;
-  width: 100%;
-  z-index: -10;
-  filter: opacity(90%);
-`;
 
-export {
-  Bio,
-  Container,
-  NetworkContainer,
-  FeedContainer,
-  Me,
-  Cursor,
-  Text,
-  Hi,
-  ChannelsBox,
-  FeedsBox,
-};
+export { Bio, Container, NetworkContainer, Me, Cursor };
