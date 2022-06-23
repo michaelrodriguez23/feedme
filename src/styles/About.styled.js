@@ -4,11 +4,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: white;
-  height: 90vh;
+  height: 99vh;
 `;
 const Me = styled.img`
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   right: 0%;
   height: 50%;
   transition: ease-out 0.4s;
