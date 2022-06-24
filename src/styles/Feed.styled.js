@@ -105,11 +105,12 @@ const Header = styled.div`
   position: fixed;
   width: 50vh;
   padding-left: 1em;
+  padding-top: 0.5em;
   @media all and (max-width: 500px) {
     font-size: 1.2vh;
-    width: 100vw;
+    width: 10vw;
     z-index: 10;
-    margin-top: -1.3em;
+    padding-top: 1em;
   }
 `;
 const Wrapper = styled.div`

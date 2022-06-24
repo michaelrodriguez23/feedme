@@ -14,7 +14,7 @@ let data = [
     },
     links: {
       project:
-        "https://www.instagram.com/ar/765229211152517/?ch=NzAyYTBmOTA2MWMyZGU2NzEwMTViYzdmMTQxMjg0YzI%3D",
+        "https://www.instagram.com/ar/530569538692821/?ch=ZTU1NjAzNTY1ZmE4MDQ3YjZlNGVhZGY2OWVlOWEzM2I%3D",
       documentation: "doc link",
       github: "github link",
     },
@@ -34,7 +34,8 @@ let data = [
       second: "",
     },
     links: {
-      project: "https://michaelrodriguez23.github.io/jasonFox/",
+      project:
+        "https://michaelrodriguez23.github.io/jasonFox/pages/portfolio.html",
       documentation: "doc link",
       github: "github link",
     },

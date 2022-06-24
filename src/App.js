@@ -23,7 +23,7 @@ function useWindowSize() {
 }
 
 export function App() {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(active);
   const [emailActive, setEmailActive] = useState(false);
   const [height, width] = useWindowSize();
 
@@ -36,17 +36,8 @@ export function App() {
   return (
     <div>
       <Router>
-        {!active ? (
-          <Slider
-            active={active}
-            changeSliderState={(active) => setActive(active)}
-          />
-        ) : null}
-
-        {active ? <Feeds /> : null}
-
+        {active ? <Feeds /> : <Feeds />}
         {/* <Route path="/Contact" component={Contact} /> */}
-
         {/* <Route path="/Works" component={WorksFeed} /> */}
       </Router>
     </div>
