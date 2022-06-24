@@ -34,9 +34,10 @@ const NetworkContainer = styled.div`
 const Cursor = styled.span``;
 
 const Bio = styled.div`
-  margin: auto;
+  margin-top: 0em;
+  padding: 1.5em;
   position: relative;
-  font-size: 6vw;
+  font-size: 5.5vw;
   overflow: hidden;
   z-index: 2;
 `;

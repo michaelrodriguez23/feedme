@@ -76,7 +76,14 @@ export function About({ emailActive }) {
       />
 
       {emailActive ? <Contact /> : null}
-
+      <Bio>
+        <span>
+          {" "}
+          [Michael Elijah] is a programmer, and a new media artist. Who is
+          interested in the web as a cultural social space, and format for
+          expression.{" "}
+        </span>
+      </Bio>
       <NetworkContainer className="net">
         <Networks links={links} />
       </NetworkContainer>

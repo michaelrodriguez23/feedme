@@ -94,7 +94,7 @@ let links = [
   },
   {
     id: 3,
-    name: "~lacfur-nocwet",
+    name: " urbit ~lacfur-nocwet",
     Icon: "",
     src: "",
   },
