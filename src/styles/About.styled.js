@@ -14,6 +14,9 @@ const Me = styled.img`
   transition: ease-out 0.4s;
   @media all and (max-width: 500px) {
     height: 40%;
+    filter: opacity(0%);
+  }
+  @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
   }
   &:hover {
     filter: opacity(20%);
@@ -25,8 +28,9 @@ const NetworkContainer = styled.div`
   left: 10%;
 
   @media all and (max-width: 500px) {
-    width: 12em;
-    bottom: 15%;
+    width: 20em;
+    font-size: 0.8em;
+    bottom: 20%;
     left: 2%;
   }
 `;
@@ -38,8 +42,12 @@ const Bio = styled.div`
   padding: 1.5em;
   position: relative;
   font-size: 5.5vw;
-  overflow: hidden;
   z-index: 2;
+  @media all and (max-width: 500px) {
+    margin-top: 3em;
+    font-size: 5vw;
+    width: 15em;
+  }
 `;
 
 export { Bio, Container, NetworkContainer, Me, Cursor };

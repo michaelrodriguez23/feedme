@@ -71,7 +71,7 @@ export default function RadioButtons(props) {
           name="feedOption"
           onClick={(active) => props.changeRadioState(3)}
         />
-        <label for="radio3"> camera roll </label>
+        <label for="radio3"> pix </label>
       </Button>
 
       <Button>
