@@ -28,13 +28,13 @@ const Title = styled.p`
 `;
 const Caption = styled.p`
   font-size: 0.9em;
+  height: 1em;
   word-wrap: break-word;
   white-space: 1em;
   width: 30vw;
   font-family: monospace;
   margin: auto;
   text-align: center;
-
   @media screen and (max-width: 450px) {
     font-size: 1.2vh;
     width: 50vw;
@@ -69,7 +69,10 @@ const LinkContainer = styled.div`
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
+  align-content: space-between;
+  justify-content: base;
   gap: 0.2em;
+  margin-top: 2em;
 `;
 const List = styled.li`
   display: flex;
@@ -77,7 +80,7 @@ const List = styled.li`
   height: 40vh;
   padding: 2em;
   margin-bottom: 2em;
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 750px) {
     flex-direction: column;
   }
 `;

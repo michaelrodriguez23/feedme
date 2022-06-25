@@ -13,8 +13,7 @@ let data = [
       second: "./assets/img/work/NFT.png",
     },
     links: {
-      project:
-        "https://www.instagram.com/ar/530569538692821/?ch=ZTU1NjAzNTY1ZmE4MDQ3YjZlNGVhZGY2OWVlOWEzM2I%3D",
+      project: "https://michaelrodriguez23.github.io/fieldnotes/",
       documentation: "doc link",
       github: "github link",
     },
@@ -55,6 +54,26 @@ let data = [
     },
     links: {
       project: "https://github.com/michaelrodriguez23/WhatIsNews",
+      documentation: "doc link",
+      github: "github link",
+    },
+  },
+  {
+    id: 2,
+    title:
+      "'Getting Situated in Augmented Reality ~ School for Poetic Computation",
+    description:
+      "Explored the world of AR through patch programming in Spark AR + Blender ",
+    year: "2021",
+    tags: ["onyx"],
+    client: "SFPC",
+    images: {
+      cover: "./assets/img/work/mask.gif",
+      first: "",
+      second: "",
+    },
+    links: {
+      project: "https://www.youtube.com/watch?v=LAFYb9Hl1NE",
       documentation: "doc link",
       github: "github link",
     },
