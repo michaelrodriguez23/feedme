@@ -6,29 +6,26 @@ const Container = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: -5;
+  padding: 1em;
 
   @media screen and (max-width: 450px) {
   }
 `;
 
 const Title = styled.p`
-  font-size: 1.1em;
+  font-size: 1em;
   font-family: monospace;
-  font-weight: 900;
-  display: block;
-  margin: auto;
+  display: span;
   text-align: center;
-  width: 30vw;
-
+  font-weight: 800;
+  width: 38vw;
   @media screen and (max-width: 450px) {
-    font-size: 0.9em;
-    font-weight: 700;
-    width: 30vw;
+    font-size: 0.8em;
+    width: 32vw;
   }
 `;
 const Caption = styled.p`
   font-size: 0.9em;
-  height: 1em;
   word-wrap: break-word;
   white-space: 1em;
   width: 30vw;
@@ -43,8 +40,8 @@ const Caption = styled.p`
 `;
 const CoverImage = styled.img`
   object-fit: contain;
-  height: 23vw;
-  width: 23vw;
+  height: 20vw;
+  width: 20vw;
   padding: 1em;
   border: 0.1em double silver;
   border-radius: 1em;
@@ -59,7 +56,6 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 1em;
 `;
 const LinkContainer = styled.div`
   display: flex;
@@ -69,8 +65,7 @@ const LinkContainer = styled.div`
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-content: space-between;
-  justify-content: base;
+  align-content: space-around;
   gap: 0.2em;
   margin-top: 2em;
 `;
@@ -79,8 +74,8 @@ const List = styled.li`
   flex-direction: row;
   height: 40vh;
   padding: 2em;
-  margin-bottom: 2em;
-  @media screen and (max-width: 750px) {
+  align-items: center;
+  @media screen and (max-width: 850px) {
     flex-direction: column;
   }
 `;

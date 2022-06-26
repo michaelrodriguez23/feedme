@@ -1,7 +1,7 @@
 import styled from "styled-components";
 const Photo = styled.img`
   width: 20vw;
-  object-fit: fill;
+  object-fit: contain;
   display: block;
   margin: auto;
 
@@ -24,19 +24,20 @@ const List = styled.li`
 const DetailWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  padding: 1em;
+  border-radius: 1em;
 `;
 const Caption = styled.p`
-  font-size: 1em;
-  width: 20em;
+  font-size: 0.9em;
   color: black;
   font-family: Helvetica;
   display: block;
   margin: auto;
   text-align: center;
   text-decoration: none;
-  padding-top: 1em;
   @media all and (max-width: 500px) {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 `;
 const Dates = styled.p`
@@ -48,7 +49,7 @@ const Dates = styled.p`
   margin: auto;
   text-align: center;
   text-decoration: none;
-  padding-top: 1em;
+  padding-top: 0.5em;
   @media all and (max-width: 450px) {
     font-size: 1em;
   }
@@ -57,28 +58,25 @@ const Dates = styled.p`
 const DivContainer = styled.div`
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   flex-wrap: wrap;
-  align-content: right;
-  max-height: 10000px;
+  max-height: 20000px;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   overflow-x: scroll;
   overflow-y: scroll;
   z-index: 10;
-  margin-top: 0;
-  gap: 3em;
   @media all and (max-width: 500px) {
   }
 `;
 const ListWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100vw;
   padding: 1em;
-  gap: 10em;
-  justify-content: right;
-  margin-right: 15em;
+  margin-top: 2em;
+  gap: 1em;
+
   @media all and (max-width: 500px) {
     flex-direction: column;
     margin-right: 0;
@@ -99,15 +97,14 @@ const Container = styled.div`
 `;
 const Header = styled.div`
   color: lightsteelblue;
-  font-size: 4vh;
+  font-size: 0.9em;
   font-family: monospace;
   height: 10vh;
   position: fixed;
-  width: 50vh;
-  padding-left: 1em;
+  width: 100vw;
   padding-top: 0.5em;
   @media all and (max-width: 500px) {
-    font-size: 1.2vh;
+    font-size: 0.9em;
     width: 10vw;
     z-index: 10;
     padding-top: 1em;
